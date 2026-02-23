@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biện Pháp Tu Từ: Chêm Xen & Liệt Kê</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="THTV.css">
+</head>
+<body>
+
+  <!-- PARTICLES BACKGROUND -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- BACK BUTTON -->
+  <button class="back-btn" id="backBtn" onclick="window.location.href='http://127.0.0.1:5501/index.html'" title="Quay lại">
+    
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+    <span>Quay lại</span>
+  </button>
+
+  <!-- SCROLL TO TOP -->
+  <button class="scroll-top" id="scrollTopBtn" title="Lên đầu trang">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header class="header" id="top">
+      <div class="header-deco header-deco--tl">✦</div>
+      <div class="header-deco header-deco--tr">✦</div>
+      <div class="header-deco header-deco--bl">✦</div>
+      <div class="header-deco header-deco--br">✦</div>
+      <div class="header-inner">
+        <div class="header-subtitle">Bài 8 · Thực Hành Tiếng Việt</div>
+        <h1>Biện Pháp Tu Từ<br><span>Chêm Xen <em>&</em> Liệt Kê</span></h1>
+        <div class="header-divider">
+          <div class="hd-line"></div>
+          <div class="hd-ornament">❦</div>
+          <div class="hd-line"></div>
+        </div>
+        <div class="header-tags">
+          <span class="htag">Ngữ Văn</span>
+          <span class="htag">Học Kỳ II</span>
+          <span class="htag">Lớp 10</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAV PILLS -->
+    <nav class="nav-pills">
+      <a href="#khai-niem" class="nav-pill">Khái Niệm</a>
+      <a href="#cau-1" class="nav-pill">Câu 1</a>
+      <a href="#cau-2" class="nav-pill">Câu 2</a>
+      <a href="#cau-3" class="nav-pill">Câu 3</a>
+    </nav>
+
+    <!-- KHÁI NIỆM -->
+    <section id="khai-niem" class="section reveal">
+      <div class="section-title">
+        <div class="section-title__icon">❖</div>
+        <h2>Khái Niệm</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="concept-grid">
+        <div class="concept-card reveal-left">
+          <div class="concept-card__number">01</div>
+          <div class="concept-badge">Biện pháp tu từ</div>
+          <h3>Chêm Xen</h3>
+          <p>Chêm xen là biện pháp <strong>chêm vào câu</strong> một từ, một cụm từ, một câu, thậm chí một chuỗi câu để bổ sung thông tin cần thiết hay bộc lộ cảm xúc.</p>
+          <div class="concept-note">
+            <span class="concept-note__icon">📌</span>
+            Thường đứng sau <em>dấu phẩy</em>, <em>dấu gạch ngang</em> hoặc trong <em>ngoặc đơn</em>.
+          </div>
+        </div>
+
+        <div class="concept-card reveal-right">
+          <div class="concept-card__number">02</div>
+          <div class="concept-badge">Biện pháp tu từ</div>
+          <h3>Liệt Kê</h3>
+          <p>Liệt kê là biện pháp <strong>sắp xếp nối tiếp</strong> các từ, các cụm từ cùng loại để diễn tả những khía cạnh khác nhau của thực tế, tư tưởng, tình cảm.</p>
+          <div class="concept-note">
+            <span class="concept-note__icon">✨</span>
+            Tạo <em>ấn tượng mạnh</em> về hình ảnh và cảm xúc cho người đọc.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider reveal"><span>❧</span></div>
+
+    <!-- CÂU 1 -->
+    <section id="cau-1" class="section reveal">
+      <div class="section-title">
+        <div class="section-title__icon">❖</div>
+        <h2>Câu 1</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="exercise-block">
+        <div class="exercise-header">
+          <div class="exercise-number">1</div>
+          <div class="exercise-question">Hãy chỉ ra biện pháp tu từ <em>chêm xen</em> và nêu tác dụng của biện pháp ấy trong các trường hợp dưới đây.</div>
+        </div>
+
+        <!-- 1a -->
+        <div class="example-item reveal">
+          <div class="example-label">a</div>
+          <div class="quote-box">
+            <div class="quote-icon">"</div>
+            <p>— Có một nàng Bạch Tuyết các bạn ơi<br>Với lại bảy chú lùn rất quấy!<br>— Mười chú chứ, nhìn xem, trong lớp ấy<br><em>(Ôi những trận cười trong sáng đó lao xao).</em></p>
+            <div class="quote-author">— Hoàng Nhuận Cầm</div>
+          </div>
+          <div class="answer-card">
+            <div class="answer-tag">Đáp án</div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">🔍</span> Biện pháp chêm xen:</div>
+              <div class="answer-body"><mark>"Mười chú chứ, nhìn xem, trong lớp ấy"</mark> và câu trong ngoặc <mark>(Ôi những trận cười trong sáng đó lao xao)</mark>.</div>
+            </div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">✨</span> Tác dụng:</div>
+              <div class="answer-body">Xác nhận thông tin về số lượng nam sinh trong lớp học, đồng thời thể hiện sự hoài niệm về những niềm vui thời đi học.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1b -->
+        <div class="example-item reveal">
+          <div class="example-label">b</div>
+          <div class="quote-box">
+            <div class="quote-icon">"</div>
+            <p>Đoạn ông mở gói giấy, lấy ra cục a ngùy — <em>cái thứ thuốc dẻo quánh, màu vàng xỉn mà tôi đã thấy dạo trước</em> — véo một miếng gắn vào đầu một cọng sậy.</p>
+            <div class="quote-author">— Đoàn Giỏi</div>
+          </div>
+          <div class="answer-card">
+            <div class="answer-tag">Đáp án</div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">🔍</span> Biện pháp chêm xen:</div>
+              <div class="answer-body"><mark>cái thứ thuốc dẻo quánh, màu vàng xỉn mà tôi đã thấy dạo trước</mark> (nằm giữa hai dấu gạch ngang).</div>
+            </div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">✨</span> Tác dụng:</div>
+              <div class="answer-body">Bổ sung thêm thông tin miêu tả cụ thể, sinh động cho cục a ngùy, giúp người đọc hình dung rõ hơn về sự vật.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1c -->
+        <div class="example-item reveal">
+          <div class="example-label">c</div>
+          <div class="quote-box">
+            <div class="quote-icon">"</div>
+            <p>Tôi thì không bao giờ quên cô ấy, <em>mặc dù thực ra là có gì đâu một tình cờ như thế, một gặp gỡ vẩn vơ, lưu luyến mơ hồ gần như không có thật mà năm tháng cuộc đời cứ mãi chồng chất lên muốn xóa nhòa</em>.</p>
+            <div class="quote-author">— Bảo Ninh</div>
+          </div>
+          <div class="answer-card">
+            <div class="answer-tag">Đáp án</div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">🔍</span> Biện pháp chêm xen:</div>
+              <div class="answer-body"><mark>mặc dù thực ra là có gì đâu một tình cờ như thế... muốn xóa nhòa</mark> — cụm mệnh đề chêm vào sau dấu phẩy.</div>
+            </div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">✨</span> Tác dụng:</div>
+              <div class="answer-body">Bổ sung thông tin về tình cảm của nhân vật "tôi" dành cho Giang và bộc lộ cảm xúc sâu lắng, nuối tiếc của bản thân.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider reveal"><span>❧</span></div>
+
+    <!-- CÂU 2 -->
+    <section id="cau-2" class="section reveal">
+      <div class="section-title">
+        <div class="section-title__icon">❖</div>
+        <h2>Câu 2</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="exercise-block">
+        <div class="exercise-header">
+          <div class="exercise-number">2</div>
+          <div class="exercise-question">Chỉ ra biện pháp tu từ <em>liệt kê</em> và nêu tác dụng của biện pháp ấy trong các trường hợp sau.</div>
+        </div>
+
+        <!-- 2a -->
+        <div class="example-item reveal">
+          <div class="example-label">a</div>
+          <div class="quote-box">
+            <div class="quote-icon">"</div>
+            <p>Cái lành lạnh của hơi nước sông ngòi, mương rạch, của đất ẩm và dưỡng khí thảo mộc thở ra từ bình minh.</p>
+            <div class="quote-author">— Đoàn Giỏi</div>
+          </div>
+          <div class="answer-card">
+            <div class="answer-tag">Đáp án</div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">🔍</span> Biện pháp liệt kê:</div>
+              <div class="answer-body"><mark>hơi nước sông ngòi, mương rạch, của đất ẩm và dưỡng khí thảo mộc</mark>.</div>
+            </div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">✨</span> Tác dụng:</div>
+              <div class="answer-body">Diễn tả các khía cạnh phong phú của cảnh bình minh, đồng thời cho người đọc cảm nhận được vẻ đẹp mát lành, tươi mới của thiên nhiên.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2b -->
+        <div class="example-item reveal">
+          <div class="example-label">b</div>
+          <div class="quote-box">
+            <div class="quote-icon">"</div>
+            <p>Mấy con kì nhông nằm vươn mình phơi lưng trên gốc cây mục, sắc da lưng luôn luôn biến đổi từ xanh hóa vàng, từ vàng hóa đỏ, từ đỏ hóa tím xanh...</p>
+            <div class="quote-author">— Đoàn Giỏi</div>
+          </div>
+          <div class="answer-card">
+            <div class="answer-tag">Đáp án</div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">🔍</span> Biện pháp liệt kê:</div>
+              <div class="answer-body"><mark>từ xanh hóa vàng, từ vàng hóa đỏ, từ đỏ hóa tím xanh...</mark></div>
+            </div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">✨</span> Tác dụng:</div>
+              <div class="answer-body">Diễn tả sự biến đổi liên tục, kỳ diệu của màu sắc trên lưng con kì nhông, tạo hình ảnh sinh động và thú vị.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2c -->
+        <div class="example-item reveal">
+          <div class="example-label">c</div>
+          <div class="quote-box">
+            <div class="quote-icon">"</div>
+            <p>Bà con xem, Đăm Săn uống không biết say, ăn không biết no, chuyện trò không biết chán.</p>
+            <div class="quote-author">— Trích sử thi Đăm Săn</div>
+          </div>
+          <div class="answer-card">
+            <div class="answer-tag">Đáp án</div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">🔍</span> Biện pháp liệt kê:</div>
+              <div class="answer-body"><mark>uống không biết say, ăn không biết no, chuyện trò không biết chán</mark>.</div>
+            </div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">✨</span> Tác dụng:</div>
+              <div class="answer-body">Diễn tả sức ăn, sức uống và sự vui vẻ của Đăm Săn; cho người đọc cảm nhận được tầm vóc to lớn và sự gần gũi, thân ái của người anh hùng.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2d -->
+        <div class="example-item reveal">
+          <div class="example-label">d</div>
+          <div class="quote-box">
+            <div class="quote-icon">"</div>
+            <p>Tôi đã cầm cây xà gạc phát rẫy mới này, tôi rạch rừng, tôi giết tê giác trong thung, giết cọp beo trên núi, giết kền kền, quạ dữ trên ngọn cây, chém ma thiêng quỷ ác trên đường đi.</p>
+            <div class="quote-author">— Trích sử thi Đăm Săn</div>
+          </div>
+          <div class="answer-card">
+            <div class="answer-tag">Đáp án</div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">🔍</span> Biện pháp liệt kê:</div>
+              <div class="answer-body"><mark>tôi rạch rừng, tôi giết tê giác trong thung, giết cọp beo trên núi, giết kền kền, quạ dữ trên ngọn cây, chém ma thiêng quỷ ác trên đường đi</mark>.</div>
+            </div>
+            <div class="answer-row">
+              <div class="answer-label"><span class="icon-label">✨</span> Tác dụng:</div>
+              <div class="answer-body">Diễn tả các hành động quả cảm, mạnh mẽ của Đăm Săn, làm nổi bật hình tượng người anh hùng sử thi phi thường, dũng mãnh.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider reveal"><span>❧</span></div>
+
+    <!-- CÂU 3 -->
+    <section id="cau-3" class="section reveal">
+      <div class="section-title">
+        <div class="section-title__icon">❖</div>
+        <h2>Câu 3</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="exercise-block">
+        <div class="exercise-header">
+          <div class="exercise-number">3</div>
+          <div class="exercise-question">Thử đảo thứ tự các bộ phận trong những phép liệt kê rồi rút ra kết luận: xét về ý nghĩa, các phép liệt kê ấy có gì khác nhau?</div>
+        </div>
+
+        <div class="quote-box reveal">
+          <div class="quote-icon">"</div>
+          <p>Một ngôn ngữ được đánh giá là phát triển khi nó ngày càng có tính chất trí tuệ hóa và quốc tế hóa. Điều này rất quan trọng khi ta đặt tiếng Việt trong bối cảnh thời đại ngày nay: <em>thời đại của thông tin, của trí tuệ; thời đại của hội nhập khu vực, hội nhập toàn cầu,...</em></p>
+          <div class="quote-author">— Phạm Văn Đồng</div>
+        </div>
+
+        <div class="comparison-grid reveal">
+          <div class="comparison-card comparison-card--original">
+            <div class="comparison-card__badge">Câu gốc</div>
+            <div class="comparison-card__text">
+              <em>"...thời đại của thông tin, của trí tuệ; thời đại của hội nhập khu vực, hội nhập toàn cầu,..."</em>
+            </div>
+            <div class="comparison-card__desc">
+              <span class="tag-good">✓ Logic</span>
+              Các bộ phận được sắp xếp theo cặp và theo trình tự <strong>tăng tiến</strong>: thông tin → trí tuệ; khu vực → toàn cầu (từ hẹp đến rộng).
+            </div>
+          </div>
+          <div class="comparison-arrow">⇄</div>
+          <div class="comparison-card comparison-card--reversed">
+            <div class="comparison-card__badge comparison-card__badge--alt">Sau khi đảo</div>
+            <div class="comparison-card__text">
+              <em>"...thời đại của hội nhập toàn cầu, hội nhập khu vực; thời đại của trí tuệ, thông tin,..."</em>
+            </div>
+            <div class="comparison-card__desc">
+              <span class="tag-bad">✗ Mất logic</span>
+              Thứ tự các phần không đảm bảo tính logic, cái trước bao trùm cái sau, mất đi hiệu quả nghệ thuật của phép liệt kê tăng tiến.
+            </div>
+          </div>
+        </div>
+
+        <div class="conclusion-box reveal">
+          <div class="conclusion-icon">💡</div>
+          <div class="conclusion-content">
+            <strong>Kết luận:</strong> Phép liệt kê trong câu gốc là <em>liệt kê tăng tiến</em> — thứ tự các yếu tố có vai trò quan trọng và không thể thay đổi tùy tiện. Phép liệt kê sau khi đảo là <em>liệt kê không tăng tiến</em> — thứ tự các yếu tố có thể hoán đổi mà không ảnh hưởng nhiều đến ý nghĩa tổng thể.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-ornament">❦</div>
+      <p>Thực Hành Tiếng Việt · Bài 8</p>
+      <p class="footer-sub">Biện Pháp Tu Từ Chêm Xen & Liệt Kê</p>
+    </footer>
+
+  </div>
+
+  <script src="THTV.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Tiêu đề được điền từ config.js -->
+  <title id="page-title">VB2</title>
+
+  <!-- Google Fonts (được điền động từ config.js) -->
+  <link id="google-fonts" rel="stylesheet" href=""/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="Van-ban.css"/>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════
+       ◀ NÚT QUAY LẠI  (góc trên trái)
+  ════════════════════════════════════════ -->
+  <div class="back-btn-wrapper">
+    <button class="back-btn" id="backBtn" onclick="window.location.href='http://127.0.0.1:5501/index.html'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5"
+           stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      <span>Quay Lại</span>
+    </button>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       🎨 THEME SWITCHER  (góc trên phải)
+  ════════════════════════════════════════ -->
+  <div class="theme-switcher">
+    <button class="theme-toggle-btn" onclick="togglePanel()">🎨 màu nền</button>
+    <div class="theme-panel" id="themePanel">
+
+      <div>
+        <label>Bộ theme</label>
+        <select id="presetSelect" onchange="applyPreset(this.value)">
+          <option value="forest">🌿 Forest (Mặc định)</option>
+          <option value="ocean">🌊 Ocean</option>
+          <option value="midnight">🌙 Midnight</option>
+          <option value="rose">🌸 Rose</option>
+          <option value="sand">🏜️ Sand</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Màu chính</label>
+        <input type="color" id="colorPrimary" value="#2d6a4f"
+               oninput="customColor('primary', this.value)"/>
+      </div>
+
+      <div>
+        <label>Màu nhấn</label>
+        <input type="color" id="colorAccent" value="#c9a84c"
+               oninput="customColor('accent', this.value)"/>
+      </div>
+
+      <div>
+        <label>Phông chữ</label>
+        <select id="fontSelect" onchange="applyFont(this.value)">
+          <option value="playfair">Playfair (Cổ điển)</option>
+          <option value="merriweather">Merriweather (Trang trọng)</option>
+          <option value="josefin">Josefin (Hiện đại)</option>
+          <option value="crimson">Crimson (Văn học)</option>
+        </select>
+      </div>
+
+      <button class="apply-btn" onclick="exportConfig()">📋 Sao chép config</button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       NỘI DUNG TRANG  (được điền từ config.js)
+  ════════════════════════════════════════ -->
+  <div class="page-wrapper">
+
+    <header>
+     
+      <h1 id="doc-title"></h1>
+      <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-diamond"></div>
+        <div class="divider-line"></div>
+      </div>
+    </header>
+
+    <div class="sections">
+
+      <!-- Mục 1 -->
+      <div class="section">
+        <span class="section-number">01</span>
+        <span class="section-tag" id="tag1"></span>
+        <h2 id="title1"></h2>
+        <p id="content1a"></p>
+        <p id="content1b"></p>
+      </div>
+
+      <!-- Mục 2 -->
+      <div class="section">
+        <span class="section-number">02</span>
+        <span class="section-tag" id="tag2"></span>
+        <h2 id="title2"></h2>
+        <p id="content2a"></p>
+        <p id="content2b"></p>
+      </div>
+
+      <!-- Mục 3 – Canva -->
+      <div class="section">
+        <span class="section-number">03</span>
+        <span class="section-tag" id="tag3"></span>
+        <h2 id="title3"></h2>
+        <p id="content3"></p>
+        <a class="canva-btn" id="canva-link" href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+          <span></span>
+        </a>
+      </div>
+
+    </div><!-- /.sections -->
+
+    <footer id="footer-text"></footer>
+  </div><!-- /.page-wrapper -->
+
+  <!-- Script -->
+  <script src="Van-ban.js"></script>
+
+</body>
+</html>

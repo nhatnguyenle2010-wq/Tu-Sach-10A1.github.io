@@ -1,0 +1,511 @@
+/* ====================================================
+   ĐẤT RỪNG PHƯƠNG NAM — Theme
+   Màu sắc: Rừng tràm, sông nước miền Nam, nắng vàng
+   ==================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  /* Bảng màu rừng phương Nam */
+  --forest-deep:   #1a3d2b;   /* Xanh rừng sâu */
+  --forest-mid:    #2d6a4f;   /* Xanh tràm */
+  --forest-light:  #52b788;   /* Lá non */
+  --earth-dark:    #5c3d1e;   /* Nâu đất */
+  --earth-mid:     #8b5e3c;   /* Nâu gỗ */
+  --amber:         #d4862a;   /* Vàng nắng sông Cửu Long */
+  --amber-light:   #f2b45a;   /* Nắng chiều */
+  --river-blue:    #4a7c8b;   /* Xanh sông nước */
+  --cream:         #fdf6e3;   /* Giấy cũ ố vàng */
+  --parchment:     #f5ead0;   /* Da thuộc */
+  --white:         #ffffff;
+
+  /* Gradient chủ đạo: Nắng rừng → Lá xanh */
+  --gradient: linear-gradient(135deg, #5c3d1e 0%, #2d6a4f 50%, #1a3d2b 100%);
+  /* Gradient nắng */
+  --gradient-warm: linear-gradient(135deg, #d4862a 0%, #f2b45a 60%, #e8a43a 100%);
+  /* Gradient dịu — dùng cho nút, badge */
+  --gradient-btn:  linear-gradient(135deg, #d4862a 0%, #8b5e3c 100%);
+
+  --text-dark:  #1e2e1a;
+  --text-mid:   #3a4e38;
+  --text-light: #6b7f60;
+  --bg:         #eae8df;      /* Nền vàng đất kem */
+  --card-shadow: 0 20px 60px rgba(26, 61, 43, 0.28);
+}
+
+/* ── Reset ─────────────────────────────────────────── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  background: var(--bg);
+  background-image:
+    /* Vân lá nhỏ — texture tinh tế */
+    radial-gradient(ellipse at 20% 50%, rgba(45,106,79,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(212,134,42,0.07) 0%, transparent 50%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* ── Topbar ─────────────────────────────────────────── */
+.Mainmenu {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--amber-light);
+  text-decoration: none;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  transition: color 0.25s;
+}
+.Mainmenu:hover { color: #fff; }
+
+.topbar {
+  width: 100%;
+  background: var(--gradient);
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 24px rgba(26,61,43,0.45);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* Đường kẻ cây tre */
+  border-bottom: 3px solid var(--amber);
+}
+
+.topbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+.topbar .logo-icon {
+  width: 38px; height: 38px;
+  background: rgba(212,134,42,0.30);
+  border-radius: 8px;
+  border: 1px solid rgba(242,180,90,0.5);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.topbar .logo h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--cream);
+}
+.topbar .logo p {
+  font-size: 0.75rem;
+  opacity: 0.75;
+  color: var(--amber-light);
+}
+.topbar .book-title {
+  color: var(--amber-light);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  opacity: 0.95;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+/* ── Reader wrap ────────────────────────────────────── */
+.reader-wrap {
+  width: 100%;
+  max-width: 1060px;
+  padding: 38px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+/* ── Page dots ──────────────────────────────────────── */
+.page-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.page-indicator .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(45,106,79,0.35);
+  border: 1px solid rgba(45,106,79,0.5);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.page-indicator .dot.active {
+  background: var(--gradient-warm);
+  border-color: var(--amber);
+  transform: scale(1.55);
+  box-shadow: 0 0 6px rgba(212,134,42,0.6);
+}
+
+/* ── Book spread ────────────────────────────────────── */
+.book-spread {
+  display: flex;
+  width: 100%;
+  max-width: 920px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  transition: opacity 0.35s, transform 0.35s;
+  /* Viền sách cổ */
+  border: 1px solid rgba(92,61,30,0.25);
+  outline: 4px solid rgba(26,61,43,0.12);
+  outline-offset: -4px;
+}
+
+.book-spread:has(.cover-page) {
+  max-width: 500px;
+  min-height: 700px;
+}
+
+.book-spread.turning {
+  opacity: 0;
+  transform: scale(0.97) rotateY(3deg);
+}
+
+/* Gáy sách */
+.book-spread.spine-line {
+  position: absolute;
+  top: 5%; left: 44.5%;
+  height: 90%; width: 2px;
+  background: linear-gradient(to bottom,
+    transparent,
+    rgba(92,61,30,0.3),
+    rgba(212,134,42,0.2),
+    transparent
+  );
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ── Cover ──────────────────────────────────────────── */
+.cover-page {
+  width: 100%;
+  min-height: 700px;
+  height: 700px;
+  background: var(--gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cover-page.cover-front {
+  background-image: url('picture/0.avif');
+}
+
+/* Lớp phủ màu rừng nhẹ lên ảnh bìa */
+.cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(26,61,43,0.18) 0%,
+    rgba(92,61,30,0.10) 60%,
+    rgba(212,134,42,0.08) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cover-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Vòng tròn nền trang trí bìa */
+.cover-page .bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212,134,42,0.12);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Nút bìa sách */
+.cover-btn {
+  margin-top: 38px;
+  padding: 14px 40px;
+  background: var(--cream);
+  color: var(--earth-dark);
+  border: 2px solid var(--amber);
+  border-radius: 30px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  letter-spacing: 0.5px;
+}
+.cover-btn:hover {
+  background: var(--amber);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(92,61,30,0.35);
+}
+
+/* ── Story pages ────────────────────────────────────── */
+.image-page {
+  width: 44%;
+  min-height: 560px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--forest-deep);
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, rgba(45,106,79,0.12) 0%, rgba(26,61,43,0.12) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ── Ảnh chương – giữ nguyên class names ───────────── */
+.image-container.chapter-1  { background-image: url('picture/1.avif'); }
+.image-container.chapter-2  { background-image: url('picture/2.avif'); }
+.image-container.chapter-3  { background-image: url('picture/3.avif'); }
+.image-container.chapter-4  { background-image: url('picture/4.avif'); }
+.image-container.chapter-5  { background-image: url('picture/5.avif'); }
+.image-container.chapter-6  { background-image: url('picture/6.avif'); }
+.image-container.chapter-7  { background-image: url('picture/7.avif'); }
+.image-container.chapter-8  { background-image: url('picture/8.avif'); }
+.image-container.chapter-9  { background-image: url('picture/9.avif'); }
+.image-container.chapter-10 { background-image: url('picture/10.avif'); }
+
+.story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Text page ──────────────────────────────────────── */
+.text-page {
+  width: 56%;
+  min-height: 560px;
+  /* Giấy parchment cổ xưa */
+  background: var(--cream);
+  background-image:
+    linear-gradient(to bottom, rgba(245,234,208,0.6) 0%, rgba(253,246,227,1) 30%);
+  padding: 50px 42px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  /* Đường kẻ dọc bên trái mô phỏng cạnh sách */
+  border-left: 3px solid rgba(92,61,30,0.15);
+}
+
+/* Số trang — badge lá rừng */
+.page-num-badge {
+  position: absolute;
+  top: 16px; left: 16px;
+  background: rgba(45,106,79,0.12);
+  color: var(--forest-mid);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(45,106,79,0.25);
+  z-index: 2;
+}
+
+.chapter-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--forest-mid);
+  margin-bottom: 12px;
+}
+
+.text-page h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  color: var(--text-dark);
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+.text-page p {
+  font-size: 1rem;
+  line-height: 1.95;
+  color: var(--text-mid);
+  text-align: justify;
+  /* Cảm giác trang sách thật */
+  hyphens: auto;
+}
+
+/* Chữ cái đầu — dropcap nâu đất */
+.text-page p.dropcap::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.2rem;
+  font-weight: 700;
+  float: left;
+  line-height: 0.8;
+  margin: 6px 12px 0 0;
+  color: var(--earth-dark);
+  text-shadow: 1px 1px 0 rgba(212,134,42,0.25);
+}
+
+/* Footer trang */
+.text-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(92,61,30,0.2);
+  /* Trang trí: cành lá */
+  position: relative;
+}
+/* Đường kẻ ornament giữa footer */
+.text-footer::before {
+  content: '✦';
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: var(--amber);
+  background: var(--cream);
+  padding: 0 6px;
+}
+
+.page-num-txt {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.spine-dots {
+  display: flex;
+  gap: 5px;
+}
+.spine-dots span {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: rgba(45,106,79,0.35);
+}
+
+/* ── Nav controls ───────────────────────────────────── */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-btn {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(212,134,42,0.4);
+  background: var(--gradient);
+  color: var(--amber-light);
+  font-size: 22px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 20px rgba(26,61,43,0.45);
+  transition: all 0.3s;
+}
+.nav-btn:hover {
+  transform: scale(1.12);
+  background: var(--gradient-btn);
+  color: var(--white);
+  border-color: var(--amber);
+  box-shadow: 0 8px 26px rgba(212,134,42,0.5);
+}
+.nav-btn:disabled {
+  opacity: 0.28;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.nav-info {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* ── Responsive: mobile ─────────────────────────────── */
+@media (max-width: 700px) {
+  .book-spread { flex-direction: column; }
+
+  .book-spread:has(.cover-page) {
+    max-width: 100%;
+    min-height: 600px;
+  }
+  .cover-page {
+    min-height: 600px;
+    height: 600px;
+    padding: 40px 30px;
+  }
+  .cover-page h2 { font-size: 1.9rem; }
+
+  .image-page {
+    width: 100%;
+    min-height: 350px;
+    height: 350px;
+  }
+  .image-container {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+  }
+  .text-page {
+    width: 100%;
+    min-height: auto;
+    padding: 28px 22px;
+    border-left: none;
+    border-top: 3px solid rgba(92,61,30,0.15);
+  }
+  .spine-line { display: none; }
+  .topbar { padding: 12px 18px; }
+  .topbar .book-title { display: none; }
+}
+
+@media (max-width: 480px) {
+  .book-spread:has(.cover-page) { min-height: 500px; }
+  .cover-page {
+    min-height: 500px;
+    height: 500px;
+    padding: 30px 20px;
+  }
+  .cover-page h2 { font-size: 1.6rem; }
+  .cover-emoji { font-size: 70px; }
+  .image-page { height: 350px; min-height: 350px; }
+  .image-container { min-height: 350px; }
+}

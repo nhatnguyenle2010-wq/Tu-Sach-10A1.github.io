@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    height: 550px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+    left: 0;
+    z-index: 2;
+}   
+
+.sign-up-container {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+}
+
+.container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+@keyframes show {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+form {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.social-container {
+    margin: 20px 0;
+}
+
+.social-container a {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+    transition: all 0.3s ease;
+}
+
+.social-container a:hover {
+    border-color: #667eea;
+    background: #667eea;
+}
+
+.social-container a:hover svg {
+    fill: #fff;
+}
+
+span {
+    font-size: 14px;
+    color: #666;
+    margin: 15px 0;
+}
+
+input {
+    background: #f6f5f7;
+    border: none;
+    padding: 14px 18px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    min-height: 44px; /* Touch-friendly */
+}
+
+input:focus {
+    background: #eee;
+    box-shadow: 0 0 0 2px #667eea;
+}
+
+button {
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 15px;
+    min-height: 44px; /* Touch-friendly */
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button.ghost {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+button.ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+.overlay-panel h1 {
+    color: #fff;
+}
+
+.overlay-panel p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 15px 0;
+    display: inline-block;
+    min-height: 44px;
+    line-height: 44px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.mobile-toggle {
+    display: none;
+}
+
+/* Tablet Landscape - 900px */
+@media (max-width: 900px) {
+    .container {
+        max-width: 750px;
+        height: 500px;
+    }
+
+    form {
+        padding: 0 35px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .overlay-panel {
+        padding: 0 30px;
+    }
+
+    .overlay-panel p {
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
+
+/* Tablet Portrait - 768px */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        max-width: 100%;
+        height: auto;
+        min-height: 500px;
+        max-height: 90vh;
+    }
+
+    .form-container {
+        width: 100%;
+        position: relative;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .sign-in-container,
+    .sign-up-container {
+        position: relative;
+        transform: none !important;
+        opacity: 1;
+    }
+
+    .sign-up-container {
+        display: none;
+    }
+
+    .container.right-panel-active .sign-up-container {
+        display: grid;
+    }
+
+    .container.right-panel-active .sign-in-container {
+        display: none;
+    }
+
+    .overlay-container {
+        display: none;
+    }
+
+    form {
+        padding: 40px 30px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .social-container {
+        margin: 15px 0;
+    }
+
+    .social-container a {
+        height: 44px;
+        width: 44px;
+        margin: 0 8px;
+    }
+
+    span {
+        font-size: 13px;
+        margin: 12px 0;
+    }
+
+    input {
+        padding: 14px 16px;
+        margin: 6px 0;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+
+    button {
+        padding: 14px 40px;
+        font-size: 13px;
+        margin-top: 12px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .mobile-toggle {
+        display: block;
+        margin-top: 20px;
+        color: #667eea;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .mobile-toggle:hover {
+        text-decoration: underline;
+    }
+
+    a {
+        min-height: auto;
+        line-height: normal;
+        padding: 10px 0;
+    }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 10px;
+        min-height: 450px;
+    }
+
+    .form-container {
+        min-height: 450px;
+    }
+
+    form {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    .social-container {
+        margin: 12px 0;
+    }
+
+    .social-container a {
+        height: 40px;
+        width: 40px;
+        margin: 0 6px;
+    }
+
+    span {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    input {
+        padding: 12px 15px;
+        margin: 5px 0;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 12px 30px;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .mobile-toggle {
+        margin-top: 15px;
+        font-size: 13px;
+    }
+
+    a {
+        font-size: 13px;
+    }
+}
+
+/* Extra Small Mobile - 360px */
+@media (max-width: 360px) {
+    .container {
+        min-height: 400px;
+    }
+
+    .form-container {
+        min-height: 400px;
+    }
+
+    form {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .social-container a {
+        height: 38px;
+        width: 38px;
+        margin: 0 4px;
+    }
+
+    input {
+        padding: 11px 14px;
+    }
+
+    button {
+        padding: 11px 25px;
+    }
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+    input, button, a, .social-container a {
+        min-height: 44px;
+    }
+
+    button:hover {
+        transform: none;
+    }
+
+    button:active {
+        transform: scale(0.98);
+    }
+
+    .social-container a:hover {
+        border-color: #ddd;
+        background: transparent;
+    }
+
+    .social-container a:active {
+        border-color: #667eea;
+        background: #667eea;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    form {
+        padding: 25px 30px;
+    }
+
+    .social-container {
+        margin: 10px 0;
+    }
+
+    input {
+        margin: 4px 0;
+    }
+}

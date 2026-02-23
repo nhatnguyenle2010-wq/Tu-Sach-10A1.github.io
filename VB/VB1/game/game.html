@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 Mảnh Ghép Kiến Thức – Tủ Sách 10A1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+
+  <!-- ─── HERO BANNER ─── -->
+  <div class="hero-banner">
+    <a class="back-link" href="http://127.0.0.1:5501/VB/VB1/Van-ban.html">← Quay lại</a>
+    <div class="hero-label">📚 Ôn Tập Văn Học</div>
+    <h1>7 Mảnh Ghép Kiến Thức</h1>
+    <p>Khám phá từng mảnh ghép để hiểu trọn vẹn tác phẩm<br>
+       <em>"Đi lấy mật"</em> – Đoàn Giỏi</p>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-label" id="progressLabel">0 / 7 mảnh ghép đã mở</div>
+  </div>
+
+  <!-- ─── CARD GRID ─── -->
+  <div class="section-wrap">
+    <div class="grid" id="cardGrid">
+
+      <!-- Card 1 -->
+      <div class="card" data-id="0" onclick="openModal(0)">
+        <div class="card-badge">✓</div>
+        <div class="card-num">Mảnh 1</div>
+        <span class="card-icon">🗺️</span>
+        <h3>Tóm tắt câu chuyện</h3>
+        <p>Hành trình đi lấy mật của An và Cò</p>
+        <div class="card-cta">Khám phá →</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card" data-id="1" onclick="openModal(1)">
+        <div class="card-badge">✓</div>
+        <div class="card-num">Mảnh 2</div>
+        <span class="card-icon">👁️</span>
+        <h3>Hệ thống điểm nhìn</h3>
+        <p>3 góc nhìn – 1 bức tranh Nam Bộ</p>
+        <div class="card-cta">Khám phá →</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card" data-id="2" onclick="openModal(2)">
+        <div class="card-badge">✓</div>
+        <div class="card-num">Mảnh 3</div>
+        <span class="card-icon">💬</span>
+        <h3>Nghệ thuật đối thoại</h3>
+        <p>Lời nói làm nổi bật cá tính</p>
+        <div class="card-cta">Khám phá →</div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card" data-id="3" onclick="openModal(3)">
+        <div class="card-badge">✓</div>
+        <div class="card-num">Mảnh 4</div>
+        <span class="card-icon">🎨</span>
+        <h3>Kết hợp kể và tả</h3>
+        <p>Cảnh – người hòa vào nhau</p>
+        <div class="card-cta">Khám phá →</div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card" data-id="4" onclick="openModal(4)">
+        <div class="card-badge">✓</div>
+        <div class="card-num">Mảnh 5</div>
+        <span class="card-icon">⚖️</span>
+        <h3>So sánh Cò và An</h3>
+        <p>Hai tính cách – một hành trình</p>
+        <div class="card-cta">Khám phá →</div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card" data-id="5" onclick="openModal(5)">
+        <div class="card-badge">✓</div>
+        <div class="card-num">Mảnh 6</div>
+        <span class="card-icon">🌿</span>
+        <h3>Chủ đề văn bản</h3>
+        <p>Vẻ đẹp Nam Bộ & hành trình lớn lên</p>
+        <div class="card-cta">Khám phá →</div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card" data-id="6" onclick="openModal(6)">
+        <div class="card-badge">✓</div>
+        <div class="card-num">Mảnh 7</div>
+        <span class="card-icon">✨</span>
+        <h3>Ý nghĩa & thông điệp</h3>
+        <p>Bài học sau chuyến đi</p>
+        <div class="card-cta">Khám phá →</div>
+      </div>
+
+    </div>
+
+    <!-- Completion Banner -->
+    <div class="completion-banner" id="completionBanner">
+      <div style="font-size:2.5rem;margin-bottom:10px;">🎉</div>
+      <h2>Xuất sắc! Bạn đã ghép đủ 7 mảnh!</h2>
+      <p>Bạn đã nắm vững toàn bộ kiến thức về tác phẩm <em>"Đi lấy mật"</em>.<br>
+         Chúc bạn ôn tập hiệu quả và đạt kết quả tốt nhất! 🌟</p>
+    </div>
+  </div>
+
+  <!-- ─── MODAL OVERLAY ─── -->
+  <div class="overlay" id="overlay" onclick="closeOnOverlay(event)">
+    <div class="modal" id="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-header">
+        <div class="modal-icon-wrap" id="modalIconWrap">
+          <span id="modalIcon"></span>
+        </div>
+        <div class="modal-title-wrap">
+          <div class="modal-num" id="modalNum"></div>
+          <div class="modal-title" id="modalTitle"></div>
+          <div class="modal-sub" id="modalSub"></div>
+        </div>
+      </div>
+      <div class="modal-divider"></div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-nav">
+        <button class="nav-btn" id="btnPrev" onclick="navigate(-1)">← Mảnh trước</button>
+        <button class="nav-btn" id="btnNext" onclick="navigate(1)">Mảnh tiếp →</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

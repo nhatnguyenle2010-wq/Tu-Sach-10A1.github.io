@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --forest-deep:   #0f2518;
+    --forest-mid:    #1a3d2b;
+    --forest-canopy: #2d6a4f;
+    --forest-light:  #40916c;
+    --leaf-bright:   #52b788;
+    --earth-dark:    #5c3d1e;
+    --earth-mid:     #8b5e3c;
+    --amber:         #d4862a;
+    --amber-light:   #f2b45a;
+    --sunray:        #ffe8a3;
+    --cream:         #fdf6e3;
+    --parchment:     #f5ead0;
+    --river:         #4a7c8b;
+    --white:         #ffffff;
+
+    /* Gradient nền chính — rừng nhiệt đới */
+    --bg-gradient: linear-gradient(
+        160deg,
+        #0f2518 0%,
+        #1a3d2b 30%,
+        #2d6a4f 60%,
+        #1e4d35 80%,
+        #0f2518 100%
+    );
+
+    /* Gradient thẻ sách */
+    --card-forest:  linear-gradient(135deg, #1a3d2b 0%, #2d6a4f 100%);
+    --card-earth:   linear-gradient(135deg, #5c3d1e 0%, #8b5e3c 100%);
+    --card-river:   linear-gradient(135deg, #2c5f6e 0%, #4a7c8b 100%);
+    --card-amber:   linear-gradient(135deg, #d4862a 0%, #f2b45a 100%);
+    --card-moss:    linear-gradient(135deg, #3a5f3a 0%, #52b788 100%);
+    --card-dusk:    linear-gradient(135deg, #4a3520 0%, #8b6340 100%);
+
+    --gradient-btn: linear-gradient(135deg, #d4862a 0%, #8b5e3c 100%);
+    --card-shadow:  0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ── Body — rừng sâu ──────────────────────────────── */
+body {
+    font-family: 'Lora', Georgia, serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    /* Vân rừng tinh tế */
+}
+
+/* Lớp ánh sáng lọc qua tán rừng */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 40% at 20% 10%,  rgba(212,134,42,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 80%,  rgba(82,183,136,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 30% at 50% 40%,  rgba(242,180,90,0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* ── Animated Background — lá bay ─────────────────── */
+.bg-animation {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Thay emoji sách → lá rừng */
+.floating-book {
+    position: absolute;
+    font-size: 2.2rem;
+    opacity: 0.08;
+    animation: floatLeaf 22s infinite ease-in-out;
+    filter: hue-rotate(0deg) saturate(0.6);
+}
+
+/* Gán lại nội dung = lá/cây qua data-content giả (dùng nth-child) */
+.floating-book:nth-child(1)::after { content: '🌿'; }
+.floating-book:nth-child(2)::after { content: '🍃'; }
+.floating-book:nth-child(3)::after { content: '🌳'; }
+.floating-book:nth-child(4)::after { content: '🍀'; }
+.floating-book:nth-child(5)::after { content: '🌱'; }
+
+.floating-book:nth-child(1) { top: 8%;  left: 8%;  animation-delay: 0s;  animation-duration: 18s; }
+.floating-book:nth-child(2) { top: 55%; left: 78%; animation-delay: 3s;  animation-duration: 24s; }
+.floating-book:nth-child(3) { top: 25%; right:12%; animation-delay: 6s;  animation-duration: 20s; }
+.floating-book:nth-child(4) { bottom:18%;left:22%; animation-delay: 9s;  animation-duration: 26s; }
+.floating-book:nth-child(5) { bottom:38%;right:28%;animation-delay: 12s; animation-duration: 16s; }
+
+@keyframes floatLeaf {
+    0%   { transform: translateY(0)    rotate(0deg)   scale(1); }
+    20%  { transform: translateY(-40px) rotate(8deg)  scale(1.05); }
+    40%  { transform: translateY(-70px) rotate(-6deg) scale(0.95); }
+    60%  { transform: translateY(-45px) rotate(10deg) scale(1.02); }
+    80%  { transform: translateY(-20px) rotate(-4deg) scale(0.98); }
+    100% { transform: translateY(0)    rotate(0deg)   scale(1); }
+}
+
+/* ── Header ───────────────────────────────────────── */
+.page-header {
+    position: relative;
+    z-index: 10;
+    padding: 40px 0;
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(212,134,42,0.35);
+    border-radius: 50px;
+    color: var(--amber-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-btn:hover {
+    background: rgba(212,134,42,0.2);
+    border-color: var(--amber);
+    color: var(--sunray);
+    transform: translateX(-5px);
+}
+
+/* Tiêu đề */
+.header-title {
+    flex: 1;
+    text-align: center;
+}
+
+.title-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+    animation: sway 4s infinite ease-in-out;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-6deg) translateY(0); }
+    25%       { transform: rotate(4deg)  translateY(-8px); }
+    50%       { transform: rotate(-3deg) translateY(-14px); }
+    75%       { transform: rotate(5deg)  translateY(-6px); }
+}
+
+.header-title h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--sunray);
+    margin-bottom: 8px;
+    text-shadow:
+        0 2px 12px rgba(0,0,0,0.6),
+        0 0 40px rgba(212,134,42,0.3);
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    color: var(--leaf-bright);
+    font-weight: 500;
+    font-style: italic;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+/* Stats */
+.header-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-item {
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(212,134,42,0.3);
+    padding: 15px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--amber-light);
+    text-shadow: 0 0 20px rgba(212,134,42,0.5);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--leaf-bright);
+}
+
+/* ── Control bar ──────────────────────────────────── */
+.control-bar {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 40px;
+}
+
+.control-bar .container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.search-wrapper {
+    flex: 1;
+    position: relative;
+    max-width: 600px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    stroke: var(--forest-canopy);
+    opacity: 0.7;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 18px 20px 18px 55px;
+    border: 1px solid rgba(212,134,42,0.3);
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+    background: rgba(253,246,227,0.92);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    outline: none;
+    color: var(--forest-deep);
+    transition: all 0.3s;
+}
+
+#searchInput::placeholder { color: var(--forest-canopy); opacity: 0.6; }
+
+#searchInput:focus {
+    box-shadow: 0 8px 32px rgba(212,134,42,0.35);
+    background: var(--cream);
+    border-color: var(--amber);
+}
+
+.clear-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--earth-mid);
+    color: white;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.clear-btn:hover {
+    background: var(--earth-dark);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* View toggle */
+.view-toggle {
+    display: flex;
+    gap: 8px;
+    background: rgba(253,246,227,0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(212,134,42,0.3);
+    padding: 8px;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.toggle-btn {
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    color: var(--amber-light);
+}
+
+.toggle-btn.active {
+    background: var(--gradient-btn);
+    color: white;
+    box-shadow: 0 4px 12px rgba(212,134,42,0.4);
+}
+
+.toggle-btn:hover:not(.active) {
+    background: rgba(212,134,42,0.15);
+}
+
+/* ── Bookshelf ────────────────────────────────────── */
+.bookshelf {
+    position: relative;
+    z-index: 10;
+    padding-bottom: 80px;
+}
+
+.shelf-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(212,134,42,0.35);
+    border-radius: 50px;
+    color: var(--sunray);
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    letter-spacing: 0.5px;
+}
+
+.shelf-icon {
+    font-size: 1.4rem;
+}
+
+/* ── Books grid ───────────────────────────────────── */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.books-grid.list-view {
+    grid-template-columns: 1fr;
+}
+
+/* ── Book card ────────────────────────────────────── */
+.book-card {
+    position: relative;
+    background: rgba(253,246,227,0.95);  /* parchment */
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    /* Viền gỗ */
+    border: 1px solid rgba(92,61,30,0.2);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+/* Ánh sáng phản chiếu */
+.book-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 20px;
+}
+
+/* Đường viền ánh vàng khi hover */
+.book-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: border-color 0.35s;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.book-card:hover {
+    transform: translateY(-14px) rotateX(4deg);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,134,42,0.3);
+}
+
+.book-card:hover::before { opacity: 1; }
+.book-card:hover::after  { border-color: rgba(212,134,42,0.4); }
+
+/* ── Spine — ảnh bìa sách ─────────────────────────── */
+.book-spine {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bóng đổ dưới ảnh */
+.book-spine::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 80px;
+    background: linear-gradient(to top, rgba(15,37,24,0.5), transparent);
+    z-index: 1;
+}
+
+/* Màu cho từng loại card — palette rừng */
+.book-spine.blue   { background: var(--card-forest); }
+.book-spine.purple { background: var(--card-river); }
+.book-spine.pink   { background: var(--card-earth); }
+.book-spine.orange { background: var(--card-amber); }
+.book-spine.green  { background: var(--card-moss); }
+.book-spine.red    { background: var(--card-dusk); }
+
+/* Vân texture nhẹ trên spine */
+.book-spine.blue,
+.book-spine.purple,
+.book-spine.pink,
+.book-spine.orange,
+.book-spine.green,
+.book-spine.red {
+    background-size: 100% 100%, 200px 200px;
+}
+
+.book-emoji {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    filter: drop-shadow(0 10px 24px rgba(0,0,0,0.4));
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book-card:hover .book-emoji {
+    transform: translate(-50%, -55%) scale(1.12) rotate(6deg);
+    filter: drop-shadow(0 16px 32px rgba(0,0,0,0.5));
+}
+
+/* ── Book info — nền giấy parchment ──────────────── */
+.book-info {
+    padding: 24px 26px 20px;
+    background: var(--cream);
+    /* Đường kẻ ngang nhỏ phong cách sách cũ */
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 27px,
+        rgba(92,61,30,0.06) 28px
+    );
+}
+
+.book-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    color: var(--forest-deep);
+    margin-bottom: 7px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-shadow: none;
+}
+
+.book-author {
+    font-size: 0.92rem;
+    color: var(--earth-mid);
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.book-author::before { content: '✍️ '; }
+
+.book-desc {
+    font-size: 0.88rem;
+    color: var(--forest-mid);
+    line-height: 1.7;
+    margin-bottom: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: 'Lora', serif;
+}
+
+.book-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid rgba(92,61,30,0.18);
+    position: relative;
+}
+
+/* Ornament nhỏ giữa border */
+.book-meta::before {
+    content: '✦';
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: var(--amber);
+    background: var(--cream);
+    padding: 0 5px;
+}
+
+.book-date {
+    font-size: 0.82rem;
+    color: var(--earth-mid);
+    font-style: italic;
+}
+
+/* Nút đọc — lá rừng + hổ phách */
+.read-arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--gradient-btn);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(212,134,42,0.4);
+}
+
+.book-card:hover .read-arrow {
+    transform: translateX(5px);
+    box-shadow: 0 6px 18px rgba(212,134,42,0.6);
+}
+
+/* ── List view ────────────────────────────────────── */
+.book-card.list-view-item {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.book-card.list-view-item .book-spine {
+    width: 200px;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.book-card.list-view-item .book-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ── Empty state ──────────────────────────────────── */
+.empty-shelf {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.empty-animation {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.empty-book {
+    font-size: 6rem;
+    animation: swing 3s infinite ease-in-out;
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(-10deg); }
+    50%       { transform: rotate(10deg); }
+}
+
+.empty-sparkle {
+    position: absolute;
+    top: 0; right: 50%;
+    font-size: 2rem;
+    animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50%       { opacity: 1; transform: scale(1.2); }
+}
+
+.empty-shelf h3 {
+    color: var(--sunray);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.empty-shelf p {
+    color: var(--leaf-bright);
+    font-size: 1.05rem;
+    font-style: italic;
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-title h1 { font-size: 2.1rem; }
+    .control-bar .container { flex-direction: column; }
+    .search-wrapper { max-width: 100%; }
+    .books-grid { grid-template-columns: 1fr; gap: 25px; }
+    .book-card.list-view-item { flex-direction: column; height: auto; }
+    .book-card.list-view-item .book-spine { width: 100%; height: 200px; }
+}

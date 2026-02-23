@@ -1,0 +1,357 @@
+:root {
+  --primary: #ff9a9e;
+  --secondary: #764ba2;
+  --gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  --text-dark: #2d3748;
+  --text-mid: #4a5568;
+  --text-light: #718096;
+  --bg: #f0f2f8;
+  --white: #ffffff;
+  --card-shadow: 0 20px 60px rgba(102,126,234,0.25);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.Mainmenu {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+}
+
+.topbar {
+  width: 100%;
+  background: var(--gradient);
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.topbar .logo-icon {
+  width: 38px; 
+  height: 38px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 20px;
+}
+
+.topbar .logo h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.topbar .logo p { 
+  font-size: 0.75rem; 
+  opacity: 0.85; 
+}
+
+.topbar .book-title {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+.reader-wrap {
+  width: 100%;
+  max-width: 1060px;
+  padding: 38px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.page-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-indicator .dot {
+  width: 8px; 
+  height: 8px;
+  border-radius: 50%;
+  background: #fecfef;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.page-indicator .dot.active {
+  background: var(--primary);
+  transform: scale(1.5);
+}
+
+/* Book Page Container */
+.book-page {
+  width: 100%;
+  max-width: 600px;
+  min-height: 650px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  transition: opacity 0.35s, transform 0.35s;
+  background: white;
+}
+
+.book-page.turning {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+/* Cover Page */
+.cover-page {
+  width: 100%;
+  min-height: 1000px;
+  height: 650px;
+  background: var(--gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cover-page.cover-front {
+  background-image: url('giang truyện tranh/Bìa.avif');
+}
+
+.cover-page.cover-back {
+  background-image: url('giang truyện tranh/23.avif');
+}
+
+.cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cover-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-btn {
+  margin-top: 38px;
+  padding: 14px 40px;
+  background: white;
+  color: var(--primary);
+  border: none;
+  border-radius: 30px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.cover-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+}
+
+/* Image Page - Full width */
+.image-page {
+  width: 100%;
+  min-height: 1000px;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fc;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Page number badge */
+.page-num-badge {
+  position: absolute;
+  top: 20px; 
+  right: 20px;
+  background: rgba(255,255,255,0.9);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Các hình ảnh cho từng chapter */
+.image-container.chapter-0 { background-image: url('giang truyện tranh/0.avif'); }
+.image-container.chapter-1 { background-image: url('giang truyện tranh/1.avif'); }
+.image-container.chapter-2 { background-image: url('giang truyện tranh/2.avif'); }
+.image-container.chapter-3 { background-image: url('giang truyện tranh/3.avif'); }
+.image-container.chapter-4 { background-image: url('giang truyện tranh/4.avif'); }
+.image-container.chapter-5 { background-image: url('giang truyện tranh/5.avif'); }
+.image-container.chapter-6 { background-image: url('giang truyện tranh/6.avif'); }
+.image-container.chapter-7 { background-image: url('giang truyện tranh/7.avif'); }
+.image-container.chapter-8 { background-image: url('giang truyện tranh/8.avif'); }
+.image-container.chapter-9 { background-image: url('giang truyện tranh/9.avif'); }
+.image-container.chapter-10 { background-image: url('giang truyện tranh/10.avif'); }
+.image-container.chapter-11 { background-image: url('giang truyện tranh/11.avif'); }
+.image-container.chapter-12 { background-image: url('giang truyện tranh/12.avif'); }
+.image-container.chapter-13 { background-image: url('giang truyện tranh/13.avif'); }
+.image-container.chapter-14 { background-image: url('giang truyện tranh/14.avif'); }
+.image-container.chapter-15 { background-image: url('giang truyện tranh/15.avif'); }
+.image-container.chapter-16 { background-image: url('giang truyện tranh/16.avif'); }
+.image-container.chapter-17 { background-image: url('giang truyện tranh/17.avif'); }
+.image-container.chapter-18 { background-image: url('giang truyện tranh/18.avif'); }
+.image-container.chapter-19 { background-image: url('giang truyện tranh/19.avif'); }
+.image-container.chapter-20 { background-image: url('giang truyện tranh/20.avif'); }
+.image-container.chapter-21 { background-image: url('giang truyện tranh/21.avif'); }
+.image-container.chapter-22 { background-image: url('giang truyện tranh/22.avif'); }
+.image-container.chapter-23 { background-image: url('giang truyện tranh/unknown.avif'); }
+
+
+
+
+/* Navigation Controls */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-btn {
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: var(--gradient);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(102,126,234,0.4);
+  transition: all 0.3s;
+}
+
+.nav-btn:hover { 
+  transform: scale(1.1); 
+}
+
+.nav-btn:disabled { 
+  opacity: 0.3; 
+  cursor: not-allowed; 
+  transform: none; 
+}
+
+.nav-info {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+  min-width: 100px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .topbar { padding: 12px 18px; }
+  .topbar .book-title { display: none; }
+  
+  .book-page {
+    min-height: 700px;
+  }
+  
+  .cover-page {
+    min-height: 700px;
+    height: 500px;
+    padding: 40px 30px;
+  }
+  
+  .image-page {
+    min-height: 700px;
+    height: 500px;
+  }
+  
+  .page-num-badge {
+    top: 12px;
+    right: 12px;
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-page {
+    min-height: 600px;
+    width: 100%;
+  }
+  
+  .cover-page {
+    min-height: 600px;
+    height: 450px;
+    padding: 30px 20px;
+  }
+  
+  .image-page {
+    min-height: 600px;
+    height: 450px;
+  }
+  
+  .nav-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}

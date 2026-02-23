@@ -1,0 +1,9 @@
+/* Câu 6 – finish badge styling */
+.finish-badge {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 6px rgba(99, 102, 241, 0.2); }
+  to   { box-shadow: 0 0 20px rgba(99, 102, 241, 0.5); }
+}

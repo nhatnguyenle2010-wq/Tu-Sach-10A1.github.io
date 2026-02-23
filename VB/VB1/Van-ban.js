@@ -149,8 +149,7 @@ function exportConfig() {
   primaryColor: "${primary}",
   accentColor:  "${accent}",
   font:         "${font}",`;
-  navigator.clipboard.writeText(snippet)
-    .then(() => alert('✅ Đã sao chép config!\nDán vào PAGE_CONFIG trong Van-ban.js để dùng lại.'));
+
 }
 
 /* ── Navigate back ── */

@@ -159,7 +159,7 @@ function exportConfig() {
 function applyContent() {
   const c = PAGE_CONFIG;
 
-  document.getElementById('doc-title').innerHTML     = ` <em>${c.titleEm}</em>`;
+  document.getElementById('doc-title').innerHTML     = `${c.titleLine1} <em>${c.titleEm}</em>`;
   document.getElementById('tag1').textContent        = c.tag1;
   document.getElementById('title1').textContent      = c.title1;
   document.getElementById('content1a').textContent   = c.text1a;

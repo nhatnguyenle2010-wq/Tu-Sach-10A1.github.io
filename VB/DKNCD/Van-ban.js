@@ -4,7 +4,7 @@ const PAGE_CONFIG = {
 
   pageTitle:  "Xuân Về",
 
- 
+  titleLine1: "Xuân",
   titleEm:    "Về", 
 
 
@@ -27,7 +27,7 @@ text1a:  "Nguyễn Bính (1918 – 1966), tên thật là Nguyễn Trọng Bính
   footer: "Được biên soạn bởi tập thể 10A1 · © 2026",
 
 
-  theme: "ocean",
+  theme: "rose",
 
   /* Màu tuỳ chỉnh (chỉ dùng khi theme = "") */
   primaryColor: "#2d6a4f",

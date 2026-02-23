@@ -9,7 +9,7 @@ const PAGE_CONFIG = {
 
   /* ── TIÊU ĐỀ ── */
   pageTitle:  "Đất Rừng Phương Nam",
-  label:      "Văn Bản Chính Thức · 2024",
+
 
   titleLine1: "Đất Rừng",
   titleEm:    "Phương Nam",   
@@ -34,7 +34,7 @@ const PAGE_CONFIG = {
   canvaUrl:   "https://nguvancohanhh.my.canva.site/",   
 
   /* ── FOOTER ── */
-  footer: "© 2024 · Đất Rừng Phương Nam · Tài liệu nội bộ",
+  footer: "Được biên soạn bởi tập thể 10A1 · © 2026",
 
   /* ── THEME ──
    * Chọn một trong: "forest" | "ocean" | "midnight" | "rose" | "sand"

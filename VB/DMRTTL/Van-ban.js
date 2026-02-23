@@ -4,7 +4,7 @@ const PAGE_CONFIG = {
 
   pageTitle:  "Buổi Học Cuối Cùng",
 
- 
+  titleLine1: "Buổi Học",
   titleEm:    "Cuối Cùng", 
 
 

@@ -1,31 +1,30 @@
 
 const tracks = [
   {
-    src:      'Buổi học cuối cùng (78) của An-Phông-xơ Đô-đê.MP3',          // ← đổi thành tên file mp3 của bạn
+    src:      'Audio/Buoi-hoc-cuoi-cung.MP3',          // ← đổi thành tên file mp3 của bạn
     title:    'Buổi Học Cuối Cùng',
     tag:      'Audio Truyện Ngắn',
     emoji:    '🏫',
     gradient: 'linear-gradient(145deg, #fce3b5 0%, #f4a261 55%, #e07050 100%)',
   },
   {
-    src:      'Đất rừng phương nam (62) của Đoàn Giỏi.mp3',          // ← đổi thành tên file mp3 của bạn
+    src:      'Audio/dat-rung-phuong-nam.mp3',          // ← đổi thành tên file mp3 của bạn
     title:    'Đất Rừng Phương Nam',
     tag:      'Audio Truyện Ngắn',
     emoji:    '🌳',
     gradient: 'linear-gradient(145deg, #46ff35 0%, #00c70d 55%, #09bc06 100%)',
   },
   {
-    src:      'Xuân Về (77) của Nguyễn Bính.mp3',          // ← đổi thành tên file mp3 của bạn
+    src:      'Audio/Xuan-ve.mp3',          // ← đổi thành tên file mp3 của bạn
     title:    'Xuân Về',
     tag:      'Audio Thơ',
     emoji:    '🌸',
     gradient: 'linear-gradient(145deg, #f8b4bc 0%, #e8637a 55%, #c04460 100%)',
   },
   {
-    src:      'music/track4.mp3',          // ← đổi thành tên file mp3 của bạn
-    title:    'Soft Pink Haze',
-    artist:   'Ngọc Nhiên',
-    tag:      'Dreamy',
+    src:      'Audio/Giang.m4a',          // ← đổi thành tên file mp3 của bạn
+    title:    'Giang',
+    tag:      'Audio Truyện Ngắn',
     emoji:    '✨',
     gradient: 'linear-gradient(145deg, #d4b5f0 0%, #c084e8 55%, #9553c5 100%)',
   },

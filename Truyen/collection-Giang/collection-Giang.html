@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kệ Sách Truyện - Giang</title>
+    <link rel="stylesheet" href="collection-Giang.css" />
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+      <div class="floating-book">📚</div>
+      <div class="floating-book">📖</div>
+      <div class="floating-book">📕</div>
+      <div class="floating-book">📗</div>
+      <div class="floating-book">📘</div>
+    </div>
+
+    <!-- Header -->
+    <header class="page-header">
+      <div class="header-content">
+        <a
+          href="Truyen/collection.html"
+          class="back-btn"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+        </a>
+        <div class="header-title">
+          <span class="title-icon">📚</span>
+          <h1>Kệ Sách Truyện Ngắn</h1>
+          <p class="subtitle">Bộ sưu tập văn học đặc sắc của 10A1</p>
+        </div>
+        <div class="header-stats">
+          <div class="stat-item">
+            <span class="stat-number" id="totalBooks">0</span>
+            <span class="stat-label">truyện</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search & Filter Bar -->
+    <div class="control-bar">
+      <div class="container">
+        <div class="search-wrapper">
+          <svg
+            class="search-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Tìm kiếm theo tên truyện, tác giả..."
+          />
+          <button class="clear-btn" id="clearBtn" style="display: none">
+            ✕
+          </button>
+        </div>
+        <div class="view-toggle">
+          <button class="toggle-btn active" data-view="grid">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" />
+            </svg>
+          </button>
+          <button class="toggle-btn" data-view="list">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <line x1="8" y1="6" x2="21" y2="6" />
+              <line x1="8" y1="12" x2="21" y2="12" />
+              <line x1="8" y1="18" x2="21" y2="18" />
+              <line x1="3" y1="6" x2="3.01" y2="6" />
+              <line x1="3" y1="12" x2="3.01" y2="12" />
+              <line x1="3" y1="18" x2="3.01" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bookshelf -->
+    <main class="bookshelf">
+      <div class="container">
+        <div class="shelf-label">
+          <span class="shelf-icon">📖</span>
+          <span>Kệ Sách Của Bạn</span>
+        </div>
+
+        <div class="books-grid" id="booksContainer">
+          <!-- Books will be loaded here -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-shelf" id="emptyState" style="display: none">
+          <div class="empty-animation">
+            <div class="empty-book">📚</div>
+            <div class="empty-sparkle">✨</div>
+          </div>
+          <h3>Không tìm thấy truyện nào</h3>
+          <p>Thử tìm kiếm với từ khóa khác</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="collection-Giang.js"></script>
+  </body>
+</html>

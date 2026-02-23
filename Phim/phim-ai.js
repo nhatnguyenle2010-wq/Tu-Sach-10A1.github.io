@@ -91,10 +91,10 @@ function initGrass() {
 
 
 const CARDS = [
-  { label: 'Video 1', emoji: '🦆', src: 'vid/video (3).mp4', title: 'Đất Rừng Phương Nam' },
-  { label: 'Video 2', emoji: '🐥', src: 'vid/video (4).mp4', title: 'Giang' },
-  { label: 'Video 3', emoji: '🐤', src: 'vid/video (1).mp4', title: 'Xuân về' },
-  { label: 'Video 4', emoji: '🐣', src: 'vid/video (2).mp4', title: 'Buổi Học Cuối Cùng' },
+  { label: 'Video 1', emoji: '🦆', src: 'Phim/vid/video-3.mp4', title: 'Đất Rừng Phương Nam' },
+  { label: 'Video 2', emoji: '🐥', src: 'Phim/vid/video-4.mp4', title: 'Giang' },
+  { label: 'Video 3', emoji: '🐤', src: 'Phim/vid/video-1.mp4', title: 'Xuân về' },
+  { label: 'Video 4', emoji: '🐣', src: 'Phim/vid/video-2.mp4', title: 'Buổi Học Cuối Cùng' },
 ];
 
 

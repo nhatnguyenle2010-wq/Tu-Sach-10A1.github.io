@@ -25,7 +25,7 @@ const PAGE_CONFIG = {
   title2:        " Ôn Tập Văn Học",
   text2:         "Truy cập trang tài liệu chi tiết để tìm hiểu thêm về nội dung, thông tin bổ sung và các nguồn tham khảo liên quan đến chủ đề này.",
   pageLinkLabel: "7 Mảnh Ghép Kiến Thức",
-  pageLinkUrl:   "game/game.html", 
+  pageLinkUrl:   "VB/VB1/game/game.html", 
 
   tag3:       "Mục III",
   title3:     "Trò chơi Củng cố Kiến thức",

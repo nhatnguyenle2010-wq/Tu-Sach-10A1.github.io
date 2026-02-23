@@ -11,7 +11,7 @@ const PAGE_CONFIG = {
 
   tag1:    "Mục I",
   title1:  "Nội dung chính",
-  text1a:  "Văn bản kể về cuộc gặp gỡ tình cờ đầy ấn tượng giữa nhân vật “tôi” – một lính tân binh đang trong thời gian huấn luyện – với một cô gái tên là Giang bên giếng nước. Khi đó, Giang giúp “tôi” xâu dép, rửa chân và mời anh về nhà ăn cơm chu đáo. Tại nhà, bố của Giang – một viên trung tá quân đội – xuất hiện và hỏi han “tôi”. Giang vì muốn giúp “tôi” nên nói dối bố rằng hai người là bạn cũ, khiến bố đồng ý tặng cho chiếc xe đạp. Sau buổi gặp gỡ vui vẻ, “tôi” trở về nơi đóng quân và sau này gặp lại bố Giang trên chiến trường, nhưng được biết ông đã hi sinh. Cuộc gặp gỡ này để lại cho “tôi” nhiều kỉ niệm sâu sắc về tình người, tình quân – dân và sự đùm bọc giữa con người trong thời chiến",
+  text1a:  "Văn bản kể về cuộc gặp gỡ tình cờ đầy ấn tượng giữa nhân vật “tôi” – một lính tân binh đang trong thời gian huấn luyện – với một cô gái tên là Giang bên giếng nước. Khi đó, Giang giúp “tôi” xâu dép, rửa chân và mời anh về nhà ăn cơm chu đáo. Tại nhà, bố của Giang – một viên trung tá quân đội – xuất hiện và hỏi han “tôi”. Giang vì muốn giúp “tôi” nên nói dối bố rằng hai người là bạn cũ, khiến bố đồng ý tặng cho chiếc xe đạp. Sau buổi gặp gỡ vui vẻ, “tôi” trở về nơi đóng quân và sau này gặp lại bố Giang trên chiến trường, nhưng được biết ông đã hi sinh. Cuộc gặp gỡ này để lại cho “tôi” nhiều kỉ niệm sâu sắc về tình người, tình quân – dân và sự đùm bọc giữa con người trong thời chiến.",
 
   tag2:    "Mục II",
   title2:  "Tác giả",

@@ -2,26 +2,26 @@
 const PAGE_CONFIG = {
 
 
-  pageTitle:  "Giang",
+  pageTitle:  "Xuân Về",
 
  
-  titleEm:    "Giang", 
+  titleEm:    "Về", 
 
 
-
-  tag1:    "Mục I",
-  title1:  "Nội dung chính",
-  text1a:  "Văn bản kể về cuộc gặp gỡ tình cờ đầy ấn tượng giữa nhân vật “tôi” – một lính tân binh đang trong thời gian huấn luyện – với một cô gái tên là Giang bên giếng nước. Khi đó, Giang giúp “tôi” xâu dép, rửa chân và mời anh về nhà ăn cơm chu đáo. Tại nhà, bố của Giang – một viên trung tá quân đội – xuất hiện và hỏi han “tôi”. Giang vì muốn giúp “tôi” nên nói dối bố rằng hai người là bạn cũ, khiến bố đồng ý tặng cho chiếc xe đạp. Sau buổi gặp gỡ vui vẻ, “tôi” trở về nơi đóng quân và sau này gặp lại bố Giang trên chiến trường, nhưng được biết ông đã hi sinh. Cuộc gặp gỡ này để lại cho “tôi” nhiều kỉ niệm sâu sắc về tình người, tình quân – dân và sự đùm bọc giữa con người trong thời chiến",
 
   tag2:    "Mục II",
-  title2:  "Tác giả",
-  text2a:  "Bảo Ninh tên thật là Hoàng Ấu Phương, sinh năm 1952 tại Hà Nội. Ông từng tham gia quân đội và trực tiếp chiến đấu trong kháng chiến chống Mỹ, những trải nghiệm này đã ảnh hưởng sâu sắc đến sáng tác của ông. Bảo Ninh là nhà văn tiêu biểu của văn học Việt Nam thời kì đổi mới, nổi bật với cách viết chân thực, giàu cảm xúc và mang chiều sâu nhân bản. Tác phẩm của ông thường tập trung phản ánh chiến tranh từ góc nhìn con người, đặc biệt là những mất mát, nỗi đau và ám ảnh hậu chiến. Tác phẩm nổi tiếng nhất của ông là Nỗi buồn chiến tranh, được đánh giá cao cả trong nước và quốc tế.tái tạo đạt 47%.",
+  title2:  "Tác phẩm",
+  text2a:  "- Bài thơ \“Xuân về\” được sáng tác trước Cách mạng tháng Tám 1945.\n\n- Tác phẩm in trong tập thơ “Tâm hồn tôi” (1937) – tập thơ đầu tiên của Nguyễn Bính.\n\n- Tập thơ này thể hiện rõ phong cách thơ Nguyễn Bính thời kì đầu:\n\n- + Đậm chất dân gian\n\n- + Giàu hình ảnh làng quê Bắc Bộ\n\n- + Thể hiện tâm hồn nhạy cảm, trong trẻo của một thi sĩ trẻ\n\n → “Xuân về” tiêu biểu cho cảm hứng mùa xuân, sức sống và vẻ đẹp bình dị của quê hương trong tập thơ này.",
+
+tag1:    "Mục I",
+title1:  "Tác giả",
+text1a:  "Nguyễn Bính (1918 – 1966), tên thật là Nguyễn Trọng Bính. \n\n- Quê ở Nam Định. \n\n- Là một trong những nhà thơ tiêu biểu của phong trào Thơ mới (1932–1945).\n\n- Thơ ông mang đậm hồn quê, giàu chất dân gian, ngôn ngữ mộc mạc, giản dị nhưng giàu cảm xúc.\n\n- Ông thường viết về tình yêu, làng quê, mùa xuân, những rung động trong trẻo và nỗi buồn man mác của con người.",
   
   tag3:       "Mục III ",
   title3:     "Trò chơi Củng cố Kiến thức",
 
   canvaLabel: "Mở Tài Liệu Trên Canva",
-  canvaUrl:   "https://www.canva.com/design/DAHB3aWnxUk/t0iqPGzd_dN65woXaM2r6g/edit?utm_content=DAHB3aWnxUk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",   
+  canvaUrl:   "https://www.canva.com/design/DAHCJblLViY/UIs9QQl-cYJqiPPb05-PQQ/edit?utm_content=DAHCJblLViY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",   
 
 
   footer: "Được biên soạn bởi tập thể 10A1 · © 2026",

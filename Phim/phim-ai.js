@@ -101,7 +101,7 @@ const CARDS = [
   {
     label: 'Video 4', emoji: '🐣',
     src:   'https://drive.google.com/file/d/1db6KjkgwcOGMdagKi-0ebYFS1hp0ccOK/view?usp=drive_link',   // ← dán link vào đây
-    title: '',
+    title: 'Buổi Học Cuối Cùng',   // ← đổi tiêu đề nếu muốn
   },
 ];
 
@@ -140,24 +140,14 @@ function buildCardHTML(card, index) {
         <div class="empty-hint">Nhấn để chọn file từ máy tính</div>
       </div>
       <button class="remove-btn" id="remove-${index}" title="Xóa video">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-             stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"/>
-          <line x1="6"  y1="6" x2="18" y2="18"/>
-        </svg>
+       
       </button>
     </div>
 
     <div class="card-info">
       <span class="video-title placeholder" id="title-${index}">Chưa có video...</span>
       <button class="upload-btn" id="upload-btn-${index}">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="17 8 12 3 7 8"/>
-          <line x1="12" y1="3" x2="12" y2="15"/>
-        </svg>
-        📁 Tải lên
+        
       </button>
     </div>
   `;

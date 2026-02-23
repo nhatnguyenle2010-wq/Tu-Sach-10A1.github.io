@@ -268,20 +268,8 @@ video {
 .file-input { display: none; }
 
 /* Remove button */
-.remove-btn {
-  position: absolute; top: 9px; right: 9px; z-index: 20;
-  width: 30px; height: 30px; border-radius: 50%;
-  background: #ff6b6b;
-  border: 2.5px solid var(--duck-dark);
-  color: white;
-  display: none; align-items: center; justify-content: center;
-  cursor: pointer;
-  box-shadow: 2px 2px 0 var(--duck-dark);
-  transition: transform 0.1s;
-}
-.video-card.has-video .remove-btn { display: flex; }
-.remove-btn:hover { transform: scale(1.12); }
-.remove-btn svg { width: 13px; height: 13px; }
+
+
 
 /* Hide empty state when video is loaded */
 .video-card.has-video .empty-state { display: none; }
@@ -303,23 +291,6 @@ video {
   font-weight: 600; font-style: italic;
 }
 
-.upload-btn {
-  display: flex; align-items: center; gap: 5px;
-  padding: 6px 15px;
-  background: var(--sun);
-  border: 2.5px solid var(--duck-dark);
-  border-radius: 30px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.8rem; font-weight: 900;
-  color: var(--duck-dark);
-  cursor: pointer;
-  box-shadow: 2px 2px 0 var(--duck-dark);
-  transition: transform 0.1s, box-shadow 0.1s;
-  flex-shrink: 0;
-}
-.upload-btn:hover  { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--duck-dark); }
-.upload-btn:active { transform: translate(1px, 1px);   box-shadow: 1px 1px 0 var(--duck-dark); }
-.upload-btn svg { width: 13px; height: 13px; }
 
 /* ===== GRASS ===== */
 .grass-row {

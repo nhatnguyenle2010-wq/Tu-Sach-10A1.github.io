@@ -1,28 +1,28 @@
 
 const tracks = [
   {
-    src:      'Audio/Buoi-hoc-cuoi-cung.MP3',          // ← đổi thành tên file mp3 của bạn
+    src:      'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Audio/Buoi-hoc-cuoi-cung.MP3',          // ← đổi thành tên file mp3 của bạn
     title:    'Buổi Học Cuối Cùng',
     tag:      'Audio Truyện Ngắn',
     emoji:    '🏫',
     gradient: 'linear-gradient(145deg, #fce3b5 0%, #f4a261 55%, #e07050 100%)',
   },
   {
-    src:      'Audio/dat-rung-phuong-nam.mp3',          // ← đổi thành tên file mp3 của bạn
+    src:      'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Audio/dat-rung-phuong-nam.mp3',          // ← đổi thành tên file mp3 của bạn
     title:    'Đất Rừng Phương Nam',
     tag:      'Audio Truyện Ngắn',
     emoji:    '🌳',
     gradient: 'linear-gradient(145deg, #46ff35 0%, #00c70d 55%, #09bc06 100%)',
   },
   {
-    src:      'Audio/Xuan-ve.mp3',          // ← đổi thành tên file mp3 của bạn
+    src:      'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Audio/Xuan-ve.mp3',          // ← đổi thành tên file mp3 của bạn
     title:    'Xuân Về',
     tag:      'Audio Thơ',
     emoji:    '🌸',
     gradient: 'linear-gradient(145deg, #f8b4bc 0%, #e8637a 55%, #c04460 100%)',
   },
   {
-    src:      'Audio/Giang.m4a',          // ← đổi thành tên file mp3 của bạn
+    src:      'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Audio/Giang.m4a',          // ← đổi thành tên file mp3 của bạn
     title:    'Giang',
     tag:      'Audio Truyện Ngắn',
     emoji:    '✨',

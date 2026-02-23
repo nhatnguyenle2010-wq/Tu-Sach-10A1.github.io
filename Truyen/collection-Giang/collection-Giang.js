@@ -7,7 +7,7 @@ const stories = [
         desc: "Kể về mối tình đầu thoáng qua nhưng sâu đậm của nhân vật \"tôi\" với cô gái tên Giang trong thời gian chiến đấu. Câu chuyện kết thúc với sự tiếc nuối khi cả hai bỏ lỡ nhau.",
         emoji: "📙",
         color: "orange",
-        link: "Truyen/collection-Giang/Story book-Giang/giang-storybook.html",
+        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Giang/Story-book-Giang/giang-storybook.html",
         date: "15/02/2026"
     },
     {
@@ -16,7 +16,7 @@ const stories = [
         desc: "Kể về mối tình đầu thoáng qua nhưng sâu đậm của nhân vật \"tôi\" với cô gái tên Giang trong thời gian chiến đấu. Câu chuyện kết thúc với sự tiếc nuối khi cả hai bỏ lỡ nhau.",
         emoji: "📖",
         color: "pink",
-        link: "Truyen/collection-Giang/Giang-Truyện/giang truyện tranh.html",
+        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Giang/Giang-Truyện/giang-truyện-tranh.html",
         date: "15/02/2026"
     },
     

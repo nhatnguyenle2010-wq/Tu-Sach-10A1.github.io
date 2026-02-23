@@ -21,7 +21,7 @@ const stories = [
         desc: "Câu chuyện cảm động về tình yêu quê hương và nỗi đau mất mát qua đôi mắt của cậu bé Franz trong buổi học tiếng Pháp cuối cùng.",
         emoji: "📚",
         color: "red",
-        link: "Truyen/collection-Buoi-hoc-cuoi-cung/story book-Buoi-hoc-cuoi-cung.html",
+        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Buoi-hoc-cuoi-cung/collection-Buoi-hoc-cuoi-cung.html",
         date: "14/02/2026"
     },
     {
@@ -30,7 +30,7 @@ const stories = [
         desc: "Kể về mối tình đầu thoáng qua nhưng sâu đậm của nhân vật \"tôi\" với cô gái tên Giang trong thời gian chiến đấu. Câu chuyện kết thúc với sự tiếc nuối khi cả hai bỏ lỡ nhau.",
         emoji: "📚",
         color: "orange",
-        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyện/collection-Giang/collection-Giang.html",
+        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Giang/collection-Giang.html",
         date: "15/02/2026"
     },
       {
@@ -39,7 +39,7 @@ const stories = [
         desc: "Câu chuyện mượn hình ảnh một cậu bé bị lưu lạc trong thời kỳ kháng chiến chống Pháp ở Nam bộ để giới thiệu “Đất rừng Phương Nam”. Nơi đó, một vùng đất vô cùng giàu có, hào phóng và hùng vĩ với những con người trung hậu, trí dũng, một lòng một dạ theo kháng chiến.",
         emoji: "📚",
         color: "dark-green",
-        link: "Truyen/collection-Dat-rung-phuong-nam/collection-dat-rung-phuong-nam.html",
+        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/collection-dat-rung-phuong-nam.html",
         date: "15/02/2026"
     },
   

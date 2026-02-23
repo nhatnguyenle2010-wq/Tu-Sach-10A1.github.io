@@ -7,7 +7,7 @@ const stories = [
         desc: "Câu chuyện cảm động về tình yêu quê hương và nỗi đau mất mát qua đôi mắt của cậu bé Franz trong buổi học tiếng Pháp cuối cùng.",
         emoji: "📕",
         color: "pink",
-        link: "Truyen/collection-Buoi-hoc-cuoi-cung/story book-Buoi-hoc-cuoi-cung/buoi-hoc-cuoi-cung.html",
+        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Buoi-hoc-cuoi-cung/story book-Buoi-hoc-cuoi-cung/buoi-hoc-cuoi-cung.html",
         date: "14/02/2026"
     },
     

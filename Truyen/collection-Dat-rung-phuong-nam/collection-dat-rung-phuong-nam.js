@@ -7,7 +7,7 @@ const stories = [
         desc: "Câu chuyện mượn hình ảnh một cậu bé bị lưu lạc trong thời kỳ kháng chiến chống Pháp ở Nam bộ để giới thiệu “Đất rừng Phương Nam”. Nơi đó, một vùng đất vô cùng giàu có, hào phóng và hùng vĩ với những con người trung hậu, trí dũng, một lòng một dạ theo kháng chiến.",
         emoji: "🌳",
         color: "orange",
-        link: "Truyen/collection-Dat-rung-phuong-nam/ban-1/Dat-rung-phuong-nam.html",
+        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/ban-1/Dat-rung-phuong-nam.html",
         date: "15/02/2026"
     },
    

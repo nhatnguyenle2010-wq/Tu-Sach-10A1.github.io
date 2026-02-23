@@ -289,16 +289,16 @@ body {
 }
 
 /* ── Ảnh chương – giữ nguyên class names ───────────── */
-.image-container.chapter-1  { background-image: url('picture/1.avif'); }
-.image-container.chapter-2  { background-image: url('picture/2.avif'); }
-.image-container.chapter-3  { background-image: url('picture/3.avif'); }
-.image-container.chapter-4  { background-image: url('picture/4.avif'); }
-.image-container.chapter-5  { background-image: url('picture/5.avif'); }
-.image-container.chapter-6  { background-image: url('picture/6.avif'); }
-.image-container.chapter-7  { background-image: url('picture/7.avif'); }
-.image-container.chapter-8  { background-image: url('picture/8.avif'); }
-.image-container.chapter-9  { background-image: url('picture/9.avif'); }
-.image-container.chapter-10 { background-image: url('picture/10.avif'); }
+.image-container.chapter-1  { background-image: url('https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/ban-1/picture/0.avif'); }
+.image-container.chapter-2  { background-image: url('https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/ban-1/picture/1.avif'); }
+.image-container.chapter-3  { background-image: url('https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/ban-1/picture/2.avif'); }
+.image-container.chapter-4  { background-image: url('https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/ban-1/picture/3.avif'); }
+.image-container.chapter-5  { background-image: url('https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/ban-1/picture/4.avif'); }
+.image-container.chapter-6  { background-image: url('https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/ban-1/picture/5.avif'); }
+.image-container.chapter-7  { background-image: url('https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/ban-1/picture/6.avif'); }
+.image-container.chapter-8  { background-image: url('https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/ban-1/picture/7.avif'); }
+.image-container.chapter-9  { background-image: url('https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/ban-1/picture/8.avif'); }
+.image-container.chapter-10 { background-image: url('https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Truyen/collection-Dat-rung-phuong-nam/ban-1/picture/9.avif'); }
 
 .story-image {
   width: 100%;

@@ -94,7 +94,7 @@ const CARDS = [
   { label: 'Video 1', emoji: '🦆', src: 'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Phim/vid/video-3.mp4', title: 'Đất Rừng Phương Nam' },
   { label: 'Video 2', emoji: '🐥', src: 'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Phim/vid/video-4.mp4', title: 'Giang' },
   { label: 'Video 3', emoji: '🐤', src: 'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Phim/vid/video-1.mp4', title: 'Xuân về' },
-  { label: 'Video 4', emoji: '🐣', src: 'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Phim/vid/video-2.mp4', title: 'Buổi Học Cuối Cùng' },
+  { label: 'Video 4', emoji: '🐣', src: 'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Phim/vid/7553482490950.mp4', title: 'Buổi Học Cuối Cùng' },
 ];
 
 

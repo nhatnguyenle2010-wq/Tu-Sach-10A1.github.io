@@ -25,7 +25,7 @@ const works = [
         color: "coral",
         genre: "bieu-cam",
         genreLabel: "Cảm Thụ Văn Học",
-        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/VST/B%C3%A0i/xuan-ve/xuan-ve.html",
+        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/VST/Bai/xuan-ve/xuan-ve.html",
         date: "14/02/2026"
     },
     {
@@ -36,7 +36,7 @@ const works = [
         color: "amber",
         genre: "nghi-luan",
         genreLabel: "Nghị Luận Văn Học",
-        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/VST/B%C3%A0i/giang/giang-vst.html",
+        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/VST/Bai/giang/giang-vst.html",
         date: "15/02/2026"
     },
     {
@@ -47,7 +47,7 @@ const works = [
         color: "green",
         genre: "nghi-luan",
         genreLabel: "Nghị Luận Văn Học",
-        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/VST/B%C3%A0i/dat-rung-phuong-nam/dat-rung-phuong-nam.html",
+        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/VST/Bai/dat-rung-phuong-nam/dat-rung-phuong-nam.html",
         date: "16/02/2026"
     },
      {
@@ -58,7 +58,7 @@ const works = [
         color: "blue",
         genre: "bieu-cam",
         genreLabel: "Cảm Thụ Văn Học",
-        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/VST/B%C3%A0i/tieng-noi-dan-toc/tieng-noi-dan-toc.html",
+        link: "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/VST/Bai/tieng-noi-dan-toc/tieng-noi-dan-toc.html",
         date: "16/02/2026"
     }
     

@@ -85,17 +85,17 @@ function initGrass() {
 const CARDS = [
   {
     label: 'Video 1', emoji: '🦆',
-    src:   'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Phim/vid/video-3.mp4',
+    src:   'https://drive.google.com/file/d/1FvP_IzZ1GDZzwk0-bYSzSgqgsJOVxVN9/view?usp=drive_link',
     title: 'Đất Rừng Phương Nam',
   },
   {
     label: 'Video 2', emoji: '🐥',
-    src:   'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Phim/vid/video-4.mp4',
+    src:   'https://drive.google.com/file/d/1yksnonXH3QqQ-UbxxupKiimR6CH31Mk_/view?usp=drive_link',
     title: 'Giang',
   },
   {
     label: 'Video 3', emoji: '🐤',
-    src:   'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Phim/vid/video-1.mp4',
+    src:   'https://drive.google.com/file/d/1pNAxCcX12oenWCqcRhXPIhy_C1ysEQV-/view?usp=drive_link',
     title: 'Xuân về',
   },
   {

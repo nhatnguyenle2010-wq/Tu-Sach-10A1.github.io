@@ -16,8 +16,8 @@ const PAGE_CONFIG = {
 
   /* ── MỤC 1 – ẢNH ── */
   tag1:       "Mục I",
-  title1:     "Tác giả và Tác phẩm",
-  imgSrc:     "sc/Screenshot 2026-02-22 231606.png",
+  title1:     "Giới Thiệu",
+  imgSrc:     "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/VB/VB1/sc/anh-gth.avif",
   imgAlt:     "Đất Rừng Phương Nam",
   imgCaption: "Hình ảnh minh hoạ · Đất Rừng Phương Nam",
 

@@ -318,8 +318,8 @@ video {
   pointer-events: none;
 }
 @keyframes walkAcross {
-  from { left: -120px; }
-  to   { left: 110vw; }
+  from { left:  110vw; }
+  to   { left: -120px; }
 }
 
 /* ===== GLOBAL ANIMATIONS ===== */

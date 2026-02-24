@@ -520,10 +520,10 @@ section { padding: 80px 0; }
 #NVN.category-card p   { color: rgba(255,220,140,0.7); }
 #NVN.read-more { color: #fbbf24; background: rgba(251,191,36,0.1); }
 
-#THTV.category-card { background: var(--surface); border: 1.5px solid var(--border); }
-#THTV.category-card h3 { color: var(--text-main); }
-#THTV.category-card p  { color: var(--text-body); }
-#THTV.read-more { color: var(--mint); background: var(--mint-soft); }
+#THTV.category-card { background: linear-gradient(145deg, #381f0f, #2c1500); border: 1.5px solid rgba(212,168,67,0.3); }
+#THTV.category-card h3 { color: #f7f0e0; }
+#THTV.category-card p  { color: #d4a843; }
+#THTV.read-more { color: #ffb70f; background: rgba(212,168,67,0.15); }
 
 .category-icon {
   font-size: 3rem;

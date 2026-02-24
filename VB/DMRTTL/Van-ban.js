@@ -27,7 +27,7 @@ text1a:  "- Sinh ra ở một làng quê miền nam nước Pháp.\n- Là tác g
   footer: "Được biên soạn bởi tập thể 10A1 · © 2026",
 
 
-  theme: "midnight",
+  theme: "sand",
 
   /* Màu tuỳ chỉnh (chỉ dùng khi theme = "") */
   primaryColor: "#2d6a4f",

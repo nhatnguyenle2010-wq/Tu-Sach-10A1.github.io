@@ -146,19 +146,15 @@ window.addEventListener("scroll", setActiveNavLink);
 
 let lastScroll = 0;
 const header = document.querySelector("header");
-const SCROLL_THRESHOLD = 224; // Chỉ ẩn sau khi cuộn xuống ít nhất 80px
+const SCROLL_THRESHOLD = 224;
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
-  // Cuộn xuống → ẩn header (chỉ khi đã cuộn quá ngưỡng)
   if (currentScroll > lastScroll && currentScroll > SCROLL_THRESHOLD) {
     header.classList.add("header-hidden");
-  }
-  // Cuộn lên → hiện header
-  else if (currentScroll < lastScroll) {
+  } else if (currentScroll < lastScroll) {
     header.classList.remove("header-hidden");
-    header.style.boxShadow = "0 2px 20px rgba(0,0,0,0.2)";
   }
 
   lastScroll = currentScroll;

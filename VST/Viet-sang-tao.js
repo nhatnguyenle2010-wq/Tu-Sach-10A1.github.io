@@ -51,7 +51,7 @@ const works = [
         date: "16/02/2026"
     },
      {
-        title: "​Tiếng Nói Dân Tộc – Chìa Khóa Của Tự Do",
+        title: "Buổi Học Cuối Cùng",
         author: "10A1",
         desc: "Cảm nhận sâu sắc về văn bản mang đậm sắc thương nhớ. Từng con chữ sau đây đều là những tiếng nói trái tim quý giá đúc kết được sau khi đọc những dòng cảm xúc mà tác phảm \"Buổi Học Cuối Cùng\".",
         icon: "📖",

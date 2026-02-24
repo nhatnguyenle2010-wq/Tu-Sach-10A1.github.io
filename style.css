@@ -454,10 +454,10 @@ section { padding: 80px 0; }
 
 .work-card:hover .work-image { transform: scale(1.04); }
 
-#one.work-image   { background: linear-gradient(135deg, #a78bfa, #60a5fa); }
-#two.work-image   { background: linear-gradient(135deg, #f97316, #fbbf24); }
-#three.work-image { background: linear-gradient(135deg, #fb7185, #f97316); }
-#four.work-image  { background: linear-gradient(135deg, #34d399, #60a5fa); }
+#one.work-image   { background: linear-gradient(135deg, #22ad35, #5dce12); }
+#two.work-image   { background: linear-gradient(135deg, #a78bfa, #60a5fa); }
+#three.work-image { background: linear-gradient(135deg, #f916c0, #f472b6); }
+#four.work-image  { background: linear-gradient(135deg, #f59e0b, #ffcf7b); }
 
 .work-content { padding: 26px; }
 

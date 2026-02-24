@@ -19,16 +19,16 @@ const PAGE_CONFIG = {
   title1:     "Giới Thiệu",
   imgSrc:     "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/VB/VB1/sc/anh-gth.avif",
   imgAlt:     "Đất Rừng Phương Nam",
-  imgCaption: "Hình ảnh minh hoạ · Đất Rừng Phương Nam",
+  imgCaption: "Sơ đồ tư duy về đoạn trích Đi Lấy Mật",
 
   tag2:          "Mục II",
-  title2:        " Ôn Tập Văn Học",
+  title2:        "Ôn Tập Văn Học",
   text2:         "Truy cập trang tài liệu chi tiết để tìm hiểu thêm về nội dung, thông tin bổ sung và các nguồn tham khảo liên quan đến chủ đề này.",
   pageLinkLabel: "7 Mảnh Ghép Kiến Thức",
   pageLinkUrl:   "https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/VB/VB1/game/game.html", 
 
   tag3:       "Mục III",
-  title3:     "Trò chơi Củng cố Kiến thức",
+  title3:     "Trò Chơi Củng Cố",
 
   canvaLabel: "Mở Tài Liệu Trên Canva",
   canvaUrl:   "https://nguvancohanhh.my.canva.site/",   

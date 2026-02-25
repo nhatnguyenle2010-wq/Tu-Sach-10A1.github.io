@@ -510,10 +510,10 @@ section { padding: 80px 0; }
   box-shadow: var(--shadow-lg);
 }
 
-#TLV.category-card { background: #13111c; border: 1px solid rgba(167,139,250,0.2); }
+#TLV.category-card { background: #13111c; border: 1px solid rgba(167, 139, 250, 0.2); }
 #TLV.category-card h3 { color: #e8e0ff; }
-#TLV.category-card p  { color: rgba(200,185,255,0.7); }
-#TLV.read-more { color: var(--lavender); background: rgba(167,139,250,0.15); }
+#TLV.category-card p  { color: #ff6b35; }
+#TLV.read-more { color: #e8c547; background: rgba(167, 139, 250, 0.15); }
 
 #NVN.category-card { background: linear-gradient(145deg, #1a0f00, #2d1a06); border: 1px solid rgba(251,191,36,0.2); }
 #NVN.category-card h3  { color: #fff1cc; }

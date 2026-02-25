@@ -24,7 +24,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa, #c4b5fd);
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -295,7 +295,7 @@ body {
 }
 
 .toggle-btn.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa, #c4b5fd);
     color: white;
 }
 
@@ -485,7 +485,7 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa, #c4b5fd);
     color: white;
     display: flex;
     align-items: center;

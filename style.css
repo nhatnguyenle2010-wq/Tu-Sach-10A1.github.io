@@ -128,6 +128,7 @@ header::before {
 /* Ẩn khi scroll xuống — giữ căn giữa theo X */
 header.header-hidden {
   transform: translateX(-50%) translateY(calc(-100% - 32px));
+  pointer-events: none;
 }
 
 

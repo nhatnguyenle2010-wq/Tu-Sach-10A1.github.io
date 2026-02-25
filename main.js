@@ -145,16 +145,42 @@ function setActiveNavLink() {
 window.addEventListener("scroll", setActiveNavLink);
 
 let lastScroll = 0;
+let justCrossedHero = false;
 const header = document.querySelector("header");
-const SCROLL_THRESHOLD = 224;
+const heroSection = document.querySelector(".hero");
+
+// Ẩn header ngay từ đầu
+header.classList.add("header-hidden");
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
+  const heroBottom = heroSection
+    ? heroSection.offsetTop + heroSection.offsetHeight
+    : 400;
 
-  if (currentScroll > lastScroll && currentScroll > SCROLL_THRESHOLD) {
+  if (currentScroll < heroBottom) {
+    // Đang trong vùng hero → luôn ẩn, reset cờ
     header.classList.add("header-hidden");
-  } else if (currentScroll < lastScroll) {
-    header.classList.remove("header-hidden");
+    justCrossedHero = false;
+  } else {
+    justCrossedHero = true;
+    if (justCrossedHero === true) {
+      // Vừa vượt qua hero: hiện header một lúc rồi để auto-hide xử lý
+      
+      header.classList.remove("header-hidden");
+
+
+    } if (currentScroll > 900) {
+      justCrossedHero = false; // Đã qua hero lâu → để auto-hide hoạt động bình thường
+      // Auto-hide bình thường sau khi đã qua hero
+      if (currentScroll > lastScroll) {
+        // Scroll xuống → ẩn
+        header.classList.add("header-hidden");
+      } else {
+        // Scroll lên → hiện
+        header.classList.remove("header-hidden");
+      }
+    }
   }
 
   lastScroll = currentScroll;

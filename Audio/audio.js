@@ -22,7 +22,7 @@ const tracks = [
     gradient: 'linear-gradient(145deg, #f8b4bc 0%, #e8637a 55%, #c04460 100%)',
   },
   {
-    src:      'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Audio/Giang.m4a',          // ← đổi thành tên file mp3 của bạn
+    src:      'https://nhatnguyenle2010-wq.github.io/Tu-Sach-10A1.github.io/Audio/Giang.mp3',          // ← đổi thành tên file mp3 của bạn
     title:    'Giang',
     tag:      'Audio Truyện Ngắn',
     emoji:    '✨',

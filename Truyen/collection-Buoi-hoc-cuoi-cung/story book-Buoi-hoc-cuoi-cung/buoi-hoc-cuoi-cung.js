@@ -20,7 +20,7 @@ const PAGES = [
     label: "Chương 2",
     head: "Bảng Cáo Thị",
     pg: 2,
-    text: `Khi đi ngang qua trụ sở xã, Phrăng thấy một đám đông đang đứng trước bảng cáo thị. Từ hai năm nay, mọi tin buồn, những trận thua trận hay những mạnh lệnh khắt khe đều từ nơi đó mà ra.\n\nBác thợ rèn Oát-stơ, người cũng đang đứng đó, nhìn thấy cậu và gọi to: "Đừng vội thế cháu nhé đi, cháu đến trường vẫn còn sớm chán!". Phrăng ngỡ bác đang nhạo báng mình nên càng ra sức chạy đến ngôi trường nhỏ của thầy Ha-men.`,
+    text: `Khi đi ngang qua trụ sở xã, Phrăng thấy một đám đông đang đứng trước bảng cáo thị. Từ hai năm nay, mọi tin buồn, những trận thua trận hay những mạnh lệnh khắt khe đều từ nơi đó mà ra.\n\nBác thợ rèn Oát-stơ, người cũng đang đứng đó, nhìn thấy cậu và gọi to: "Đừng vội thế cháu nhé, cháu đến trường vẫn còn sớm chán!". Phrăng ngỡ bác đang nhạo báng mình nên càng ra sức chạy đến ngôi trường nhỏ của thầy Ha-men.`,
   },
   {
     type: "story",

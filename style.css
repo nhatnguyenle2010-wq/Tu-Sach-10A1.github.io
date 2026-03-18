@@ -308,13 +308,13 @@ nav a.active { color: var(--vermilion); background: rgba(214,58,31,0.09); }
   inset: 0;
   background-image:
     /* Wave 1 — wide, slow, vermilion */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='70'%3E%3Cpath d='M0 35 C65 10 195 10 260 35 C325 60 455 60 520 35' stroke='%23d63a1f' stroke-opacity='.09' fill='none' stroke-width='2'/%3E%3Cpath d='M0 52 C65 27 195 27 260 52 C325 77 455 77 520 52' stroke='%23d63a1f' stroke-opacity='.04' fill='none' stroke-width='1.2'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='70'%3E%3Cpath d='M0 35 C65 10 195 10 260 35 C325 60 455 60 520 35' stroke='%23d63a1f' stroke-opacity='.18' fill='none' stroke-width='2'/%3E%3Cpath d='M0 52 C65 27 195 27 260 52 C325 77 455 77 520 52' stroke='%23d63a1f' stroke-opacity='.1' fill='none' stroke-width='1.2'/%3E%3C/svg%3E"),
     /* Wave 2 — medium, saffron, phase-shifted */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='56'%3E%3Cpath d='M0 28 C42 8 128 8 170 28 C212 48 298 48 340 28' stroke='%23f0a500' stroke-opacity='.10' fill='none' stroke-width='1.5'/%3E%3Cpath d='M0 44 C42 24 128 24 170 44 C212 64 298 64 340 44' stroke='%23f0a500' stroke-opacity='.04' fill='none' stroke-width='1'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='56'%3E%3Cpath d='M0 28 C42 8 128 8 170 28 C212 48 298 48 340 28' stroke='%23f0a500' stroke-opacity='.2' fill='none' stroke-width='1.5'/%3E%3Cpath d='M0 44 C42 24 128 24 170 44 C212 64 298 64 340 44' stroke='%23f0a500' stroke-opacity='.04' fill='none' stroke-width='1'/%3E%3C/svg%3E"),
     /* Wave 3 — narrow, fast, cobalt */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='44'%3E%3Cpath d='M0 22 C25 7 75 7 100 22 C125 37 175 37 200 22' stroke='%231e40af' stroke-opacity='.08' fill='none' stroke-width='1.2'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='44'%3E%3Cpath d='M0 22 C25 7 75 7 100 22 C125 37 175 37 200 22' stroke='%231e40af' stroke-opacity='.15' fill='none' stroke-width='1.2'/%3E%3C/svg%3E"),
     /* Wave 4 — very wide, jade, subtle background swell */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='80'%3E%3Cpath d='M0 40 C95 12 285 12 380 40 C475 68 665 68 760 40' stroke='%230a8c5e' stroke-opacity='.05' fill='none' stroke-width='2.5'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='80'%3E%3Cpath d='M0 40 C95 12 285 12 380 40 C475 68 665 68 760 40' stroke='%230a8c5e' stroke-opacity='.12' fill='none' stroke-width='2.5'/%3E%3C/svg%3E");
   background-size:
     520px 70px,
     340px 56px,

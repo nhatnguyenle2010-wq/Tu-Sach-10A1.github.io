@@ -381,18 +381,6 @@ nav a.active { color: var(--vermilion); background: rgba(214,58,31,0.09); }
 
 .hero .container { position: relative; z-index: 2; }
 
-.hero .container > h2::before {
-  content: '❧ CHÀO MỪNG ❧';
-  display: block;
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.28em;
-  color: var(--vermilion);
-  margin-bottom: 18px;
-  opacity: 0.8;
-  animation: fadeInDown 0.7s 0.05s ease-out both;
-}
 
 .hero h2 {
   font-family: var(--font-display);

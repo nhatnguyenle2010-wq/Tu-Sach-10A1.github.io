@@ -325,7 +325,7 @@ body {
 }
 
 .section-title h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: Georgia, 'Times New Roman', Times, serif, serif;
   font-size: 30px;
   font-weight: 700;
   color: var(--brown-dark);
@@ -460,7 +460,7 @@ body {
   width: 46px; height: 46px;
   background: linear-gradient(135deg, var(--brown-dark), var(--brown-mid));
   color: var(--gold-light);
-  font-family: 'Cormorant Garamond', serif;
+  font-family: Georgia, 'Times New Roman', Times, serif, serif;
   font-size: 22px;
   font-weight: 700;
   border-radius: 50%;

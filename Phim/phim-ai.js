@@ -85,22 +85,22 @@ function initGrass() {
 const CARDS = [
   {
     label: 'Video 1', emoji: '🦆',
-    src:   'https://drive.google.com/file/d/1FvP_IzZ1GDZzwk0-bYSzSgqgsJOVxVN9/view?usp=drive_link',
+    src:   'https://drive.google.com/file/d/1hdOU0wn515ITfpXnEMxvJtmq6Dd_bbfu/view?usp=sharing',
     title: 'Đất Rừng Phương Nam',
   },
   {
     label: 'Video 2', emoji: '🐥',
-    src:   'https://drive.google.com/file/d/1yksnonXH3QqQ-UbxxupKiimR6CH31Mk_/view?usp=drive_link',
+    src:   'https://drive.google.com/file/d/1vCPpBfWgDFf35kHRJsgQLV-sBUrJRJts/view?usp=sharing',
     title: 'Giang',
   },
   {
     label: 'Video 3', emoji: '🐤',
-    src:   'https://drive.google.com/file/d/1pNAxCcX12oenWCqcRhXPIhy_C1ysEQV-/view?usp=drive_link',
+    src:   'https://drive.google.com/file/d/1c9MFzLkcq5eFMm59iUZoeNtknRixu8bZ/view?usp=sharing',
     title: 'Xuân về',
   },
   {
     label: 'Video 4', emoji: '🐣',
-    src:   'https://drive.google.com/file/d/1db6KjkgwcOGMdagKi-0ebYFS1hp0ccOK/view?usp=drive_link',   // ← dán link vào đây
+    src:   'https://drive.google.com/file/d/1hdOU0wn515ITfpXnEMxvJtmq6Dd_bbfu/view?usp=sharing',   // ← dán link vào đây
     title: 'Buổi Học Cuối Cùng',   // ← đổi tiêu đề nếu muốn
   },
 ];
